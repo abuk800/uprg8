@@ -3,6 +3,7 @@ import { ArrowUpRight, Sparkle } from "lucide-react"
 import { MobileMenu } from "@/components/sections/mobile-menu"
 
 /*
+ * Vorherige Headline: „Strategie, die nicht in der Schublade landet.“
  * Headline-Varianten für einen späteren Test:
  * B: „Ihr Team kennt die Antworten. Wir machen daraus Ihre Strategie.“
  * C: „Ihre Strategie ist gut. Sie kommt nur nicht im Alltag an.“
@@ -45,11 +46,11 @@ export function Hero() {
             <Sparkle className="size-3 fill-current" aria-hidden />
             Strategieberatung für den Mittelstand
           </p>
-          <h1 className="mt-7 text-[42px] font-medium leading-[1.04] tracking-[-0.045em] md:text-[72px]">
-            Strategie, die nicht<br />in der Schublade landet.
+          <h1 className="mt-7 text-balance text-[42px] font-medium leading-[1.04] tracking-[-0.045em] md:text-[72px]">
+            Gute Strategie. Und trotzdem bleibt die Umsetzung liegen?
           </h1>
-          <p className="mx-auto mt-6 max-w-[560px] text-[17px] leading-relaxed text-[#5C5B5A] md:text-[19px]">
-            Wir entwickeln sie mit den Menschen, die sie umsetzen müssen. Für Mittelständler mit 100 bis 1.000 Mitarbeitenden.
+          <p className="mx-auto mt-6 max-w-[680px] text-[17px] leading-relaxed text-[#5C5B5A] md:text-[19px]">
+            Wenn Entscheidungen ohne die Menschen entstehen, die sie später umsetzen müssen, fehlt oft die Verbindung zum Unternehmensalltag. Genau dort setzen wir an.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4">
             <a href="#kontakt" data-cta="hero"
