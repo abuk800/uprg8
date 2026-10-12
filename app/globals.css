@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-section: var(--section);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-portrait: #e4e3e1;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --animate-accordion-down: accordion-down 0.25s ease-out;
+  --animate-accordion-up: accordion-up 0.25s ease-out;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-sheet-in: sheet-in 0.3s ease-out;
+  --animate-sheet-out: sheet-out 0.2s ease-in;
+  --animate-fade-in: fade-in 0.2s ease-out;
+  --animate-fade-out: fade-out 0.2s ease-in;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #191818;
+  --muted: #f7f6f4;
+  --muted-foreground: #5c5b5a;
+  --section: #fbfaf9;
+  --border: #e7e7ea;
+  --accent: #ff6978;
+}
+
+@layer base {
+  * { border-color: var(--border); }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+  section[id] { scroll-margin-top: 72px; }
+}
+
+@keyframes accordion-down { from { height: 0 } to { height: var(--radix-accordion-content-height) } }
+@keyframes accordion-up { from { height: var(--radix-accordion-content-height) } to { height: 0 } }
+@keyframes marquee { to { transform: translateX(calc(-50% - 1.5rem)); } }
+@keyframes sheet-in { from { transform: translateX(100%) } to { transform: translateX(0) } }
+@keyframes sheet-out { from { transform: translateX(0) } to { transform: translateX(100%) } }
+@keyframes fade-in { from { opacity: 0 } to { opacity: 1 } }
+@keyframes fade-out { from { opacity: 1 } to { opacity: 0 } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* Notch: runde Aussparung unten rechts, Button (44px) sitzt mittig darin */
+.notch {
+  -webkit-mask-image: radial-gradient(circle 35px at calc(100% - 22px) calc(100% - 22px), transparent 34.5px, #000 35px);
+  mask-image: radial-gradient(circle 35px at calc(100% - 22px) calc(100% - 22px), transparent 34.5px, #000 35px);
+}
