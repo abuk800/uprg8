@@ -4,424 +4,250 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>upgr8 – Strategie, die im Alltag ankommt</title>
-<meta name="description" content="upgr8 ist die Strategieberatung für Unternehmer und Top-Manager: Strategie, Führung und Umsetzung mit Ihren Leuten. Buchen Sie ein Erstgespräch mit Armin Blassnig.">
-<meta name="theme-color" content="#191818">
+<meta name="description" content="upgr8 ist die Strategieberatung für Unternehmer und Top-Manager. Buchen Sie ein Erstgespräch mit Armin Blassnig.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add('js');</script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --white:#FFFFFF;
-  --bg-soft:#FBFAF9;
+  --section:#FBFAF9;
   --card:#F7F6F4;
   --ink:#191818;
-  --body:#5C5B5A;
+  --grey:#5C5B5A;
+  --line:#E7E7EA;
   --black:#000000;
-  --coral:#FF6978;
   --portrait:#E4E3E1;
-  --line:rgba(25,24,24,.12);
-  --shadow:0 1px 3px rgba(0,0,0,.06);
   --gutter:40px;
-  --sp:128px;
-  --ease:cubic-bezier(.22,.61,.36,1);
+  --sp:120px;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--white);color:var(--ink);font-family:'Geist',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--white);color:var(--ink);font-family:'Geist',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:16px;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
 button{font:inherit;color:inherit;cursor:pointer}
-h1,h2,h3,h4,p,ul,ol,figure,blockquote{margin:0}
-ul,ol{padding:0;list-style:none}
-:focus-visible{outline:2px solid var(--coral);outline-offset:3px;border-radius:4px}
+h1,h2,h3,p,ul,figure,blockquote{margin:0}
+ul{padding:0;list-style:none}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;z-index:200}
-.skip:focus{top:12px}
 .ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .ic-fill{fill:currentColor;stroke:none}
 
-/* Layout */
-.wrap{width:min(1280px,100% - 2*var(--gutter));margin-inline:auto}
+.wrap{width:min(1360px,100% - 2*var(--gutter));margin-inline:auto}
 section[id]{scroll-margin-top:72px}
 .section{padding-block:var(--sp)}
 .center{text-align:center}
-.h1{font-weight:400;font-size:clamp(44px,5.6vw,80px);line-height:1.05;letter-spacing:-.03em}
-.h2{font-weight:400;font-size:clamp(34px,3.9vw,56px);line-height:1.05;letter-spacing:-.03em}
-.lead{font-size:16px;color:var(--body);max-width:620px}
-.center .lead{margin-inline:auto}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:0;line-height:1.3}
-.eyebrow .ic{font-size:12px}
-.head{display:flex;flex-direction:column;gap:20px}
+.h1,.h2,.h3{font-weight:500;letter-spacing:-.05em;line-height:1.1}
+.h1{font-size:clamp(44px,5.3vw,76px)}
+.h2{font-size:clamp(34px,3.34vw,48px)}
+.h3{font-size:24px}
+.lead{color:var(--grey);max-width:560px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;line-height:1.4}
+.eyebrow .ic{font-size:20px}
+.head{display:flex;flex-direction:column;gap:16px}
 .head.center{align-items:center}
-.head .eyebrow{margin-bottom:4px}
-.muted{color:var(--body)}
+.head .lead{margin-top:4px}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;gap:16px;padding:8px 8px 8px 24px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:500;font-size:15px;line-height:1.2;border:0;transition:gap .3s var(--ease),padding .3s var(--ease),background .2s;white-space:nowrap}
-.btn-ic{width:36px;height:36px;border-radius:50%;background:var(--coral);color:var(--ink);display:grid;place-items:center;flex:none}
-.btn-ic .ic{font-size:16px;transition:transform .3s var(--ease)}
-.btn:hover{gap:22px;padding-right:10px}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:8px 8px 8px 20px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-size:15px;line-height:1.3;font-weight:500;border:0}
+.btn-ic{width:32px;height:32px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;flex:none}
+.btn-ic .ic{font-size:16px;transition:transform .25s ease}
 .btn:hover .btn-ic .ic{transform:rotate(45deg)}
 .btn--light{background:#fff;color:var(--ink)}
 .btn--light .btn-ic{background:var(--ink);color:#fff}
-.btn--light.btn--coral .btn-ic{background:var(--coral);color:var(--ink)}
-.btn--wrap{white-space:normal;text-align:left}
-.tlink{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:15px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
-.tlink .ic{transition:transform .3s var(--ease)}
-.tlink:hover .ic{transform:translateX(4px)}
 
-/* Reveal */
-.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease-out,transform .6s ease-out;transition-delay:var(--d,0ms)}
-.js .rv.in{opacity:1;transform:none}
+/* Reveal: only active when JS adds .anim (IntersectionObserver available) */
+.anim .rv{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.anim .rv.in{opacity:1;transform:none}
 
 /* Navigation */
-.nav{position:fixed;inset:0 0 auto 0;z-index:100;color:#fff;transition:background .3s,color .3s,box-shadow .3s}
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;color:#fff;transition:background .25s,color .25s,box-shadow .25s}
 .nav-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:72px}
-.logo{display:inline-flex;align-items:center}
-.logo img{height:30px;width:auto;filter:invert(1);transition:filter .3s}
-.nav-links{display:flex;align-items:center;gap:36px;font-size:15px;font-weight:500}
-.nav-links a,.nav-links .dd-btn{text-decoration:none;background:none;border:0;padding:8px 0;display:inline-flex;align-items:center;gap:6px}
-.nav-links a:hover,.nav-links .dd-btn:hover{opacity:.7}
-.dd{position:relative}
-.dd-btn .ic{font-size:14px;transition:transform .25s}
-.dd.open .dd-btn .ic{transform:rotate(180deg)}
-.dd-menu{position:absolute;left:50%;top:100%;min-width:300px;background:#fff;color:var(--ink);border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.14);padding:8px;opacity:0;visibility:hidden;transform:translate(-50%,8px);transition:opacity .2s,transform .2s,visibility .2s}
-.dd:hover .dd-menu,.dd.open .dd-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
-.dd-menu a{display:block;padding:12px 14px;border-radius:8px;font-weight:400}
-.dd-menu a:hover{background:var(--card);opacity:1}
-.nav-right{display:flex;align-items:center;justify-content:flex-end;gap:24px}
-.lang{display:flex;gap:8px;font-size:14px;font-weight:500}
-.lang a{text-decoration:none;opacity:.6}
-.lang a[aria-current]{opacity:1}
-.nav .btn{padding:6px 6px 6px 20px;font-size:14px;background:#fff;color:var(--ink)}
-.nav .btn .btn-ic{width:32px;height:32px;background:var(--ink);color:#fff}
-.burger{display:none;width:44px;height:44px;border:0;background:none;position:relative;justify-self:end}
-.burger span{position:absolute;left:11px;right:11px;height:2px;background:currentColor;border-radius:2px;transition:transform .3s,top .3s,opacity .2s}
-.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:26px}
-.nav.menu-open .burger span:nth-child(1){top:21px;transform:rotate(45deg)}
-.nav.menu-open .burger span:nth-child(2){opacity:0}
-.nav.menu-open .burger span:nth-child(3){top:21px;transform:rotate(-45deg)}
-.nav.solid,.nav.menu-open{background:#fff;color:var(--ink);box-shadow:0 1px 12px rgba(0,0,0,.08)}
+.logo{display:inline-flex}
+.logo img{height:30px;width:auto;filter:invert(1);transition:filter .25s}
+.nav-links{display:flex;gap:36px;font-size:15px;font-weight:500}
+.nav-links a{text-decoration:none;padding:8px 0}
+.nav-links a:hover{opacity:.65}
+.nav-right{display:flex;justify-content:flex-end;align-items:center}
+.nav .btn{background:#fff;color:var(--ink)}
+.nav .btn-ic{background:var(--ink);color:#fff}
+.nav.solid,.nav.menu-open{background:#fff;color:var(--ink);box-shadow:0 1px 8px rgba(0,0,0,.08)}
 .nav.solid .logo img,.nav.menu-open .logo img{filter:none}
 .nav.solid .btn,.nav.menu-open .btn{background:var(--ink);color:#fff}
-.nav.solid .btn .btn-ic{background:var(--coral);color:var(--ink)}
+.nav.solid .btn-ic,.nav.menu-open .btn-ic{background:#fff;color:var(--ink)}
+.burger{display:none;width:44px;height:44px;border:0;background:none;position:relative}
+.burger span{position:absolute;left:11px;right:11px;height:2px;background:currentColor;transition:transform .25s,top .25s,opacity .2s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:26px}
+.menu-open .burger span:nth-child(1){top:21px;transform:rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0}
+.menu-open .burger span:nth-child(3){top:21px;transform:rotate(-45deg)}
 .mmenu{display:none}
 
-/* Hero */
-.hero{position:relative;min-height:max(100vh,640px);min-height:max(100svh,640px);display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background:var(--ink);overflow:hidden}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
-.hero-shade{position:absolute;inset:0;background:
-  linear-gradient(to bottom,rgba(25,24,24,.55),rgba(25,24,24,0) 170px),
-  linear-gradient(to top,rgba(25,24,24,.85),rgba(25,24,24,0) 65%),
-  linear-gradient(to right,rgba(25,24,24,.6),rgba(25,24,24,0) 70%)}
-.hero-in{position:relative;display:grid;grid-template-columns:minmax(0,760px) 1fr;gap:40px;align-items:end;padding-top:140px;padding-bottom:48px}
-.hero-copy{display:flex;flex-direction:column;gap:24px}
-.hero-copy .h1{text-shadow:0 1px 24px rgba(0,0,0,.25)}
-.hero-sub{font-size:18px;line-height:1.5;color:rgba(255,255,255,.8);max-width:640px}
-.hero-side{justify-self:end;width:340px;display:flex;flex-direction:column;gap:28px}
-.glass{display:grid;grid-template-columns:1fr auto;gap:16px;padding:22px 20px 24px 24px;border-radius:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);position:relative;overflow:hidden}
-.scenes{display:grid}
-.scene{grid-area:1/1;opacity:0;transform:translateY(8px);transition:opacity .6s,transform .6s;visibility:hidden}
-.scene.on{opacity:1;transform:none;visibility:visible}
-.scene h2{font-size:22px;font-weight:500;letter-spacing:-.02em;line-height:1.2;margin-bottom:10px}
-.scene p{font-size:15px;line-height:1.5;color:rgba(255,255,255,.88)}
-.marks{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
-.marks button{background:none;border:0;padding:2px 0;font-size:13px;font-weight:500;color:rgba(255,255,255,.55);transition:color .3s;font-variant-numeric:tabular-nums}
-.marks button[aria-selected="true"]{color:#fff;text-shadow:0 0 12px rgba(255,255,255,.7)}
-.bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:rgba(255,255,255,.2)}
-.bar i{display:block;height:100%;background:var(--coral);transform-origin:left;transform:scaleX(0)}
-.bar i.run{animation:prog 5s linear forwards}
-@keyframes prog{to{transform:scaleX(1)}}
-.hero-cta{display:flex;flex-direction:column;gap:14px;align-items:flex-end}
-.hero-cta small{font-size:13px;color:rgba(255,255,255,.8)}
-.hero-cta .tlink{font-size:14px;color:#fff;border-color:rgba(255,255,255,.5)}
+/* 2 Hero */
+.hero{position:relative;min-height:max(100vh,680px);min-height:max(100svh,680px);display:flex;align-items:flex-end;color:#fff;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.45),rgba(0,0,0,0) 150px),linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,0) 55%)}
+.hero-in{position:relative;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;padding-block:140px 56px}
+.hero-copy{max-width:720px;display:flex;flex-direction:column;gap:20px}
+.hero-copy p{font-size:17px;color:rgba(255,255,255,.85);max-width:520px}
+.hero-cta{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.hero-cta small{font-size:14px;color:rgba(255,255,255,.7)}
 
-/* 2 Autorität */
-.big-sentence{font-size:clamp(26px,2.8vw,40px);line-height:1.2;letter-spacing:-.025em;font-weight:400;max-width:900px;margin:28px auto 0}
-.pill-inline{display:inline-grid;place-items:center;width:1.9em;height:1em;vertical-align:-.1em;border-radius:999px;background:var(--ink);color:#fff;margin-inline:.08em}
+/* 3 Statement */
+.statement{background:var(--section)}
+.stmt{font-size:clamp(28px,3vw,44px);line-height:1.15;letter-spacing:-.05em;font-weight:500;max-width:900px;margin:20px auto 0}
+.pill-inline{display:inline-grid;place-items:center;width:1.8em;height:.95em;vertical-align:-.08em;border-radius:999px;background:var(--ink);color:#fff;margin-inline:.06em}
 .pill-inline .ic{font-size:.5em;stroke-width:2}
 .avatars{display:flex;justify-content:center;margin-top:40px}
-.avatars img,.avatars a{width:56px;height:56px;border-radius:50%;border:3px solid #fff;background:var(--portrait);object-fit:cover;margin-left:-14px;position:relative;z-index:1}
+.avatars img,.avatars a{width:48px;height:48px;border-radius:50%;border:3px solid #fff;object-fit:cover;background:var(--portrait);margin-left:-12px;position:relative;z-index:1}
 .avatars img:first-child{margin-left:0}
-.avatars a{z-index:0;display:grid;place-items:center;background:#fff;border:1px solid var(--line);text-decoration:none;font-size:22px;font-weight:300;padding-left:8px;width:64px;color:var(--ink);transition:background .2s}
-.avatars a:hover{background:var(--card)}
-.avatars-note{font-size:13px;color:var(--body);max-width:560px;margin:18px auto 0}
-.logos{margin-top:56px}
-.logo-row{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.lg{position:relative;width:120px;height:44px;overflow:hidden;flex:none;opacity:.6;filter:grayscale(1) brightness(.55);transition:opacity .3s,filter .3s;mix-blend-mode:multiply}
-.lg.opq{filter:grayscale(1) contrast(1.5)}
-.lg:hover,.lg.opq:hover{opacity:1;filter:none}
-.lg img{position:absolute;max-width:none;height:auto;object-fit:cover}
-.marquee{display:none;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
-.marquee-track{display:flex;gap:40px;width:max-content;animation:marq 32s linear infinite}
-.marquee:hover .marquee-track{animation-play-state:paused}
-@keyframes marq{to{transform:translateX(calc(-50% - 20px))}}
-.cost-h{margin-top:120px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px;text-align:left}
-.stat{background:var(--bg-soft);box-shadow:var(--shadow);border-radius:8px;padding:36px 32px 28px;display:flex;flex-direction:column;gap:14px}
-.stat-n{font-size:56px;line-height:1;letter-spacing:-.03em;color:var(--coral);font-weight:400;font-variant-numeric:tabular-nums}
-.stat p{color:var(--body);font-size:16px;flex:1}
-.dots{display:flex;gap:6px;margin-top:10px}
-.dots i{width:6px;height:6px;border-radius:50%;background:#D9D8D6}
-.dots i.a{background:var(--coral)}
-.source{font-size:12px;color:var(--body);margin-top:20px}
-.core{margin-top:80px}
-.core strong{display:block;font-size:clamp(22px,2.2vw,28px);line-height:1.25;letter-spacing:-.02em;font-weight:500;max-width:860px;margin:0 auto}
-.core p{color:var(--body);margin:16px auto 0;max-width:620px}
+.avatars a{z-index:0;display:grid;place-items:center;background:#fff;text-decoration:none;font-size:22px;line-height:1;padding-left:6px;width:54px;box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.avatars-note{font-size:14px;color:var(--grey);margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:64px;text-align:left}
+.stat{background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.06);padding:32px;display:flex;flex-direction:column;gap:12px}
+.stat-n{font-size:44px;line-height:1.1;letter-spacing:-.05em;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+.stat p{font-size:16px;color:var(--grey);flex:1}
+.dots{display:flex;gap:6px;margin-top:8px}
+.dots i{width:6px;height:6px;border-radius:50%;background:var(--line)}
+.dots i.a{background:var(--ink)}
+.source{font-size:12px;color:var(--grey);margin-top:24px}
 
-/* 3 Suche */
-.cards6{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:64px}
-.scard{background:var(--card);box-shadow:var(--shadow);border-radius:8px;padding:28px;display:flex;flex-direction:column;gap:14px;transition:transform .3s var(--ease)}
-.scard:hover{transform:translateY(-4px)}
-.cic{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:20px;box-shadow:var(--shadow);flex:none}
-.scard h3{font-size:23px;font-weight:400;letter-spacing:-.02em;line-height:1.2}
-.lbl{font-size:12px;font-weight:500;letter-spacing:.02em;color:#76746F;display:flex;align-items:center;gap:8px}
-.scard .why{color:var(--body);font-size:15px;flex:1}
-.scard hr{border:0;border-top:1px solid var(--line);margin:4px 0 0;width:100%}
-.scard .how{color:var(--body);font-size:15px;min-height:3.1em;transition:color .3s}
-.scard:hover .how{color:var(--ink)}
-.scard .lbl.how-l::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--coral)}
-.scard--dark{background:var(--ink);color:#fff;gap:16px;justify-content:center;position:relative;overflow:hidden}
-.scard--dark::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:var(--coral);opacity:.18}
-.scard--dark h3{font-size:28px;color:var(--coral)}
-.scard--dark p{color:rgba(255,255,255,.82);font-size:15px}
-.scard--dark p strong{color:#fff;font-weight:500}
-.scard--dark .btn{align-self:flex-start;margin-top:8px;position:relative;z-index:1}
+/* 4 Suche */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:64px}
+.card{background:var(--card);border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.06);padding:32px;display:flex;flex-direction:column;gap:14px}
+.cic{width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:18px;margin-bottom:10px}
+.card h3{font-size:22px;font-weight:500;letter-spacing:-.05em;line-height:1.1}
+.card p{font-size:15px;color:var(--grey)}
+.card--dark{background:var(--ink)}
+.card--dark .cic{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.card--dark h3{color:#fff}
+.card--dark p{color:rgba(255,255,255,.78)}
 
-/* 4 Blinder Fleck */
-.blind{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fff;padding-block:100px}
-.blind-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 55%,transparent 100%)}
-.cloud{position:absolute;max-width:none;opacity:.7;height:auto;will-change:transform;pointer-events:none}
-.cloud.c1{width:clamp(240px,38vw,560px);left:-6%;top:10%}
-.cloud.c2{width:clamp(280px,48vw,700px);right:-10%;top:34%}
-.cloud.c3{width:clamp(220px,30vw,420px);left:20%;bottom:4%}
-.blind-in::before{content:"";position:absolute;z-index:-1;inset:-60px -80px;background:radial-gradient(ellipse at center,rgba(255,255,255,.88) 0,rgba(255,255,255,.7) 45%,rgba(255,255,255,0) 72%);pointer-events:none}
-.blind-in{position:relative;z-index:2;max-width:880px;text-align:center;display:flex;flex-direction:column;align-items:center}
-.bl-lines{display:flex;flex-direction:column;gap:12px;font-size:24px;line-height:1.3;letter-spacing:-.015em;margin-bottom:48px}
-.blind .h2{margin-bottom:28px}
-.blind .lead{font-size:18px;max-width:620px}
-
-/* 5 Lösung */
-.sol-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px}
-.sol-top .head{max-width:620px}
-.asterisk{font-size:96px;color:var(--ink);stroke-width:1;flex:none;opacity:.9}
-.sol-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:64px;align-items:start}
-.acc{display:flex;flex-direction:column;gap:12px}
-.acc-item{background:var(--bg-soft);border-radius:8px;position:relative;overflow:hidden}
-.acc-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--coral);transform:scaleY(0);transform-origin:top;transition:transform .4s var(--ease)}
-.acc-item.open::before{transform:scaleY(1)}
-.acc-h{width:100%;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;text-align:left;background:none;border:0;padding:22px 24px}
-.acc-n{font-size:14px;color:#76746F;font-variant-numeric:tabular-nums}
-.acc-t{font-size:20px;letter-spacing:-.015em;font-weight:400;line-height:1.25}
-.acc-h .ic{font-size:20px;transition:transform .3s var(--ease)}
-.acc-item.open .acc-h .ic{transform:rotate(180deg)}
-.acc-p{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
-.acc-item.open .acc-p{grid-template-rows:1fr}
-.acc-p>div{overflow:hidden}
-.acc-p p{padding:0 24px 24px 68px;color:var(--body);font-size:16px}
-.sol-media{position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--portrait);position:sticky;top:100px}
-.sol-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease}
-.sol-media img.on{opacity:1}
-.promises{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:96px}
-.promise{display:flex;flex-direction:column;gap:14px;padding-top:28px;border-top:1px solid var(--line)}
-.promise h3{font-size:23px;font-weight:400;letter-spacing:-.02em}
-.promise p{color:var(--body);font-size:15px}
-.sol-cta{margin-top:56px;display:flex;justify-content:center}
-
-/* 6 Router */
-.router{position:relative;height:90vh;min-height:620px;background:var(--ink);color:#fff;overflow:hidden;touch-action:pan-y}
-.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .8s ease,visibility .8s}
+/* 5 Für wen */
+.router{position:relative;height:100vh;height:100svh;min-height:640px;background:var(--ink);color:#fff;overflow:hidden;touch-action:pan-y}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility .7s}
 .slide.on{opacity:1;visibility:visible}
-.slide>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1)}
-.slide.on>img{animation:kb 9s ease-out forwards}
-@keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
-.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(25,24,24,.55),rgba(25,24,24,0) 65%)}
-.slide.dark::after{background:rgba(25,24,24,.55)}
+.slide>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.55),rgba(0,0,0,0) 70%)}
 .slide-in{position:absolute;z-index:2;inset:0}
-.slide-copy{position:absolute;top:150px;left:0;right:0}
-.slide-copy .h3{font-size:clamp(30px,3.5vw,48px);line-height:1.1;letter-spacing:-.03em;font-weight:400;max-width:780px}
-.aud{color:var(--coral);font-size:16px;font-weight:500;margin-top:20px}
-.slide-pill{position:absolute;right:0;bottom:100px}
-.router-eyebrow{position:absolute;z-index:3;top:104px;left:0;right:0;pointer-events:none}
-.router-eyebrow .eyebrow{pointer-events:auto}
-.pager{position:absolute;z-index:4;left:0;right:0;bottom:36px;display:flex;justify-content:center;align-items:center;gap:20px;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
-.pager button{background:none;border:0;color:#fff;display:flex;align-items:center;padding:10px;opacity:.85;transition:opacity .2s,transform .3s var(--ease)}
-.pager button:hover{opacity:1}
-.pager .prev:hover{transform:translateX(-3px)}.pager .next:hover{transform:translateX(3px)}
-.pager svg{width:44px;height:12px;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-.router-after{text-align:center;padding:48px 0;font-size:18px}
-.router-after a{display:inline-flex;gap:8px;align-items:center;text-decoration:none;font-weight:500;border-bottom:1px solid currentColor;padding-bottom:2px}
+.slide-copy{position:absolute;top:148px;left:0;display:flex;flex-direction:column;gap:16px;max-width:640px}
+.slide-copy p{font-size:16px;max-width:440px;color:rgba(255,255,255,.88)}
+.slide-pill{position:absolute;right:0;bottom:56px}
+.pager{position:absolute;z-index:4;left:0;right:0;bottom:56px;display:flex;justify-content:center;align-items:center;gap:20px;font-size:14px;font-variant-numeric:tabular-nums}
+.pager button{background:none;border:0;color:#fff;padding:10px;display:flex}
+.pager svg{width:44px;height:12px;stroke:currentColor;fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* 6 Methode */
+.sol-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px}
+.sol-top .h2{max-width:620px}
+.star-deco{font-size:80px;color:#D9D9D9;flex:none;stroke-width:1.2}
+.sol-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:64px;align-items:stretch}
+.acc{display:flex;flex-direction:column}
+.acc-item{background:var(--section);border:1px solid var(--line);margin-top:-1px}
+.acc-item:first-child{margin-top:0}
+.acc-h{width:100%;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;text-align:left;background:none;border:0;padding:24px}
+.acc-n{font-size:14px;color:var(--grey);font-variant-numeric:tabular-nums}
+.acc-t{font-size:22px;font-weight:500;letter-spacing:-.05em;line-height:1.1}
+.acc-h .ic{font-size:20px;transition:transform .25s}
+.acc-item.open .acc-h .ic{transform:rotate(180deg)}
+.acc-p{display:none}
+.acc-item.open .acc-p{display:block}
+.acc-p p{padding:0 24px 24px 58px;color:var(--grey);max-width:560px}
+.sol-media{position:relative;min-height:480px;background:var(--card);overflow:hidden}
+.sol-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.sol-media img.on{opacity:1}
 
 /* 7 Team */
-.team{background:var(--portrait)}
-.team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:64px}
-.tcard{display:flex;flex-direction:column;gap:16px}
+.team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:64px;text-align:left}
 .tp{position:relative;aspect-ratio:4/5}
 .tp-img{position:absolute;inset:0;border-radius:16px;overflow:hidden;background:var(--portrait);-webkit-mask-image:radial-gradient(circle 35px at calc(100% - 22px) calc(100% - 22px),transparent 34.5px,#000 35px);mask-image:radial-gradient(circle 35px at calc(100% - 22px) calc(100% - 22px),transparent 34.5px,#000 35px)}
-.tp-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.tp-img .col{opacity:0;transition:opacity .5s ease}
-.tp-btn{position:absolute;right:0;bottom:0;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;transition:background .3s,color .3s;text-decoration:none}
-.tp-btn .ic{font-size:18px;transition:transform .3s var(--ease)}
-.tcard:hover .col,.tcard:focus-within .col{opacity:1}
-.tcard:hover .tp-btn,.tcard:focus-within .tp-btn{background:var(--coral);color:var(--ink)}
-.tcard:hover .tp-btn .ic{transform:rotate(45deg)}
-.tcard h3{font-size:18px;font-weight:400;color:var(--ink);letter-spacing:-.01em;line-height:1.3}
-.tcard h3 span{display:block;font-size:13px;color:var(--body);margin-top:2px}
-.tcard .fy{font-size:14px;color:var(--body);margin-top:-6px}
-.testi{position:relative;margin-top:96px;border-radius:16px;overflow:hidden;height:560px;background:#8d8d8d}
-.testi img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
-.testi::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(255,255,255,.5),rgba(255,255,255,.28) 40%,rgba(255,255,255,0) 62%);pointer-events:none}
-.testi-copy{z-index:1;position:absolute;left:0;top:0;bottom:0;width:48%;padding:56px 0 56px 56px;display:flex;flex-direction:column;justify-content:center;gap:28px;color:var(--ink)}
-.testi blockquote{font-size:clamp(24px,2.3vw,32px);line-height:1.2;letter-spacing:-.025em;font-weight:400}
-.testi cite{font-style:normal;font-size:15px;line-height:1.4}
-.testi cite strong{font-weight:600;display:block}
-.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:112px}
-.case{background:#fff;border-radius:8px;box-shadow:var(--shadow);padding:32px;display:flex;flex-direction:column;gap:20px}
-.case h3{font-size:23px;font-weight:400;letter-spacing:-.02em;line-height:1.2}
-.case h3 span{display:block;font-size:14px;color:var(--body);margin-top:6px;letter-spacing:0}
-.case dl{margin:0;display:flex;flex-direction:column;gap:16px;flex:1}
-.case dt{font-size:12px;font-weight:500;color:#76746F;letter-spacing:.02em}
-.case dd{margin:2px 0 0;color:var(--body);font-size:15px}
-.case .res{border-top:1px solid var(--line);padding-top:20px}
-.case .res b{display:block;font-size:56px;line-height:1;letter-spacing:-.03em;color:var(--coral);font-weight:400}
-.case-more{margin-top:40px;display:flex;justify-content:center}
+.tp-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.tp-btn{position:absolute;right:0;bottom:0;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;text-decoration:none}
+.tp-btn .ic{font-size:18px;transition:transform .25s ease}
+.tp-btn:hover .ic{transform:rotate(45deg)}
+.tname{margin-top:14px;font-size:14px;color:var(--grey);line-height:1.4}
+.tname b{font-weight:400;font-size:18px;color:var(--ink)}
+.quote{max-width:860px;margin:80px auto 0;text-align:center}
+.quote blockquote{font-size:28px;line-height:1.3;letter-spacing:-.03em;font-weight:400;color:var(--ink)}
+.qwho{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:28px;text-align:left;font-size:15px;line-height:1.4}
+.qwho img{width:48px;height:48px;border-radius:50%;object-fit:cover}
+.qwho b{display:block;font-weight:500}
+.qwho span{color:var(--grey)}
+.refs{font-size:14px;color:var(--grey);margin-top:28px}
 
-/* 8 Hebel */
-.hebel{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:64px}
-.hcard{background:var(--card);box-shadow:var(--shadow);border-radius:8px;padding:32px;display:flex;flex-direction:column;gap:16px;transition:transform .3s var(--ease)}
-.hcard:hover{transform:translateY(-4px)}
-.hcard h3{font-size:23px;font-weight:400;letter-spacing:-.02em;line-height:1.2}
-.hcard p{color:var(--body);font-size:15px;flex:1}
-.hcard .tlink{align-self:flex-start;margin-top:8px}
-
-/* 9 FAQ */
-.faq-wrap{max-width:820px;margin-inline:auto}
-.faq{background:var(--bg-soft)}
-.faq .acc{margin-top:56px}
-.faq .acc-item{background:#fff;box-shadow:var(--shadow)}
-.faq .acc-p p{padding-left:24px}
-.faq .acc-h{grid-template-columns:1fr auto}
-
-/* 10 Abschluss */
-.final{background:var(--ink);color:#fff}
-.final-in{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
-.final-copy{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
-.final-copy p{color:rgba(255,255,255,.78);font-size:18px;max-width:520px}
-.final-copy .tlink{color:#fff;margin-top:6px}
-.final-card{position:relative;max-width:420px;justify-self:end;width:100%}
-.final-card .tp-img{background:var(--portrait)}
-.final-card .tp-img img{opacity:1}
-.final-card .tp-btn{background:var(--coral);color:var(--ink)}
-.final-card h3{font-size:18px;font-weight:400;margin-top:16px}
-.final-card h3 span{display:block;font-size:13px;color:rgba(255,255,255,.7);margin-top:2px}
-.badge{position:absolute;z-index:3;left:-28px;top:32px;background:#fff;color:var(--ink);font-size:13px;font-weight:500;padding:9px 16px 9px 14px;border-radius:999px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
-.badge i{width:8px;height:8px;border-radius:50%;background:var(--coral)}
+/* 8 Abschluss */
+.final{position:relative;height:640px;display:flex;align-items:center;justify-content:center;color:#fff;background:var(--ink);overflow:hidden;padding:0}
+.final>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.final::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55)}
+.final .wrap{position:relative;z-index:2}
+.final-in{display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;max-width:760px;margin-inline:auto}
+.final-in .lead{color:rgba(255,255,255,.88);max-width:560px}
+.final-in .btn{margin-top:8px}
 
 /* Footer */
 .footer{background:var(--black);color:#fff;padding-top:96px}
 .f-grid{display:grid;grid-template-columns:1.1fr .9fr 1.2fr;gap:56px}
 .f-grid .logo img{filter:invert(1);height:34px}
-.f-tag{margin-top:20px;color:rgba(255,255,255,.7);max-width:280px;font-size:15px}
-.f-h{font-size:13px;font-weight:500;color:rgba(255,255,255,.55);margin-bottom:18px}
+.f-tag{margin-top:20px;color:#A8A7A5;max-width:260px}
+.f-h{font-size:14px;font-weight:500;color:#A8A7A5;margin-bottom:16px}
 .f-links{display:flex;flex-direction:column;gap:10px;font-size:15px}
-.f-links a{text-decoration:none;color:rgba(255,255,255,.88)}
-.f-links a:hover{color:#fff;text-decoration:underline}
-.news{display:flex;align-items:center;background:#1c1c1c;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:5px 5px 5px 22px;gap:8px}
+.f-links a{text-decoration:none}
+.f-links a:hover{text-decoration:underline}
+.news{display:flex;align-items:center;background:#161616;border:1px solid #2c2c2c;border-radius:999px;padding:5px 5px 5px 20px;gap:8px}
 .news input{flex:1;min-width:0;background:none;border:0;color:#fff;font:inherit;font-size:15px;outline:none;padding:10px 0}
-.news input::placeholder{color:rgba(255,255,255,.5)}
-.news:focus-within{border-color:var(--coral)}
+.news input::placeholder{color:#8f8e8c}
 .news button{border:0;background:#fff;color:var(--ink);border-radius:999px;padding:12px 22px;font-weight:500;font-size:14px}
-.news-msg{font-size:13px;color:rgba(255,255,255,.7);margin-top:10px;min-height:20px}
-.f-addr{margin-top:20px;font-size:14px;color:rgba(255,255,255,.7);line-height:1.8;font-style:normal}
-.f-addr a{color:rgba(255,255,255,.88)}
-.f-copy{margin-top:72px;border-top:1px solid rgba(255,255,255,.12);padding-block:24px;font-size:13px;color:rgba(255,255,255,.6)}
-
-/* Mobile CTA bar */
-.mbar{display:none}
+.news-msg{font-size:13px;color:#A8A7A5;min-height:20px;margin-top:8px}
+.f-addr{font-size:14px;color:#A8A7A5;line-height:1.8;font-style:normal;margin-top:12px}
+.f-copy{margin-top:72px;border-top:1px solid #222;padding-block:24px;text-align:center;font-size:14px;color:#A8A7A5}
 
 /* Responsive */
 @media(max-width:1200px){
-  :root{--sp:104px}
   .team-grid{grid-template-columns:repeat(3,1fr)}
   .nav-links{gap:24px}
-  .hero-in{grid-template-columns:minmax(0,1fr) 340px}
-  .cases{gap:16px}
 }
 @media(max-width:900px){
-  :root{--sp:88px}
   .nav-in{grid-template-columns:1fr auto}
-  .nav-links,.nav-right .btn,.nav-right .lang{display:none}
+  .nav-links,.nav-right .btn{display:none}
   .burger{display:block}
-  .mmenu{display:block;position:absolute;left:0;right:0;top:72px;background:#fff;color:var(--ink);box-shadow:0 14px 24px rgba(0,0,0,.1);padding:8px var(--gutter) 28px;max-height:calc(100vh - 72px);overflow:auto;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
-  .nav.menu-open .mmenu{opacity:1;visibility:visible;transform:none}
-  .mmenu a{display:block;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:18px}
-  .mmenu .sub a{padding-left:16px;font-size:16px;color:var(--body)}
-  .mmenu .lang{display:flex;padding-top:18px}
+  .mmenu{display:block;position:absolute;left:0;right:0;top:72px;background:#fff;color:var(--ink);padding:8px var(--gutter) 24px;box-shadow:0 12px 20px rgba(0,0,0,.08);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}
+  .menu-open .mmenu{opacity:1;visibility:visible}
+  .mmenu a{display:block;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:18px;font-weight:500}
   .hero{min-height:0}
-  .hero-img{height:62vh;height:62svh;min-height:420px;bottom:auto;object-position:50% 20%}
-  .hero-shade{background:linear-gradient(to bottom,rgba(25,24,24,.55),rgba(25,24,24,0) 130px),linear-gradient(to bottom,rgba(25,24,24,0) 34svh,#191818 62svh)}
-  .hero-in{grid-template-columns:1fr;padding-top:max(46svh,330px);padding-bottom:40px;gap:32px}
-  .hero-side{justify-self:stretch;width:100%}
+  .hero-img{height:62vh;height:62svh;min-height:420px;bottom:auto;object-position:50% 15%}
+  .hero-shade{background:linear-gradient(to bottom,rgba(0,0,0,.45),rgba(0,0,0,0) 130px),linear-gradient(to bottom,rgba(25,24,24,0) 34svh,#191818 62svh)}
+  .hero-in{flex-direction:column;align-items:flex-start;padding-top:max(46svh,330px);padding-bottom:40px;gap:28px}
   .hero-cta{align-items:flex-start}
   .stats{grid-template-columns:1fr}
-  .cards6,.hebel,.cases{grid-template-columns:repeat(2,1fr)}
-  .sol-top .asterisk{display:none}
-  .sol-grid{grid-template-columns:1fr;gap:32px}
-  .sol-media{order:-1;aspect-ratio:4/3;position:relative;top:0}
-  .promises{grid-template-columns:1fr;gap:28px;margin-top:64px}
-  .final-in{grid-template-columns:1fr;gap:56px}
-  .final-card{justify-self:start}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .sol-top .star-deco{display:none}
+  .sol-grid{grid-template-columns:1fr;gap:24px}
+  .sol-media{order:-1;min-height:0;aspect-ratio:4/3}
   .f-grid{grid-template-columns:1fr 1fr}
   .f-grid>div:last-child{grid-column:1/-1}
-  .cost-h{margin-top:88px}
-  .logo-row{display:none}
-  .marquee{display:block}
-  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:90;padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom));background:#fff;box-shadow:0 -4px 20px rgba(0,0,0,.1);transform:translateY(110%);transition:transform .4s var(--ease)}
-  .mbar.show{transform:none}
-  .mbar .btn{width:100%;justify-content:space-between}
-  .footer{padding-bottom:72px}
-  .testi{height:auto;display:flex;flex-direction:column;background:var(--card);overflow:hidden}
-  .testi::after{display:none}
-  .testi img{position:relative;height:340px;object-position:75% center}
-  .testi-copy{position:static;width:auto;padding:32px 24px 36px;color:var(--ink)}
 }
 @media(max-width:600px){
   :root{--gutter:20px;--sp:72px}
   .h1{font-size:44px}
   .h2{font-size:34px}
-  .hero-sub{font-size:16px}
-  .hero .btn,.sol-cta .btn,.hero-cta .btn{white-space:normal;text-align:left}
-  .big-sentence{font-size:26px}
-  .stat-n{font-size:48px}
-  .cards6,.hebel,.cases{grid-template-columns:1fr}
-  .team-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-inline:calc(-1*var(--gutter));padding-inline:var(--gutter);scroll-padding-inline:var(--gutter);padding-bottom:8px;-webkit-overflow-scrolling:touch}
-  .tcard{flex:0 0 76%;scroll-snap-align:start}
-  .bl-lines{font-size:20px}
-  .blind .lead{font-size:16px}
-  .router{height:auto;min-height:640px;height:90vh}
-  .slide-copy{top:140px}
-  .slide-pill{right:auto;left:0;bottom:92px}
-  .aud{font-size:15px}
-  .router-after{font-size:16px;padding-inline:var(--gutter)}
-  .sol-media{aspect-ratio:1/1}
-  .acc-p p{padding-left:24px}
-  .acc-h{grid-template-columns:auto 1fr auto;gap:14px;padding:20px 18px}
-  .badge{left:12px;top:12px}
+  .cards{grid-template-columns:1fr}
+  .team-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-inline:calc(-1*var(--gutter));padding-inline:var(--gutter);scroll-padding-inline:var(--gutter);padding-bottom:8px}
+  .team-grid>div{flex:0 0 76%;scroll-snap-align:start}
+  .quote blockquote{font-size:22px}
+  .qwho{flex-direction:column;text-align:center}
+  .slide-pill{right:auto;left:0;bottom:104px}
+  .slide-copy{top:120px}
+  .slide::after{background:linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.35) 60%,rgba(0,0,0,.5))}
+  .hero-cta .btn,.final-in .btn{text-align:left}
   .f-grid{grid-template-columns:1fr;gap:40px}
-  .news button{padding-inline:16px}
-  .final-copy .btn{white-space:normal;text-align:left}
-  .case .res b{font-size:48px}
-  .pager{bottom:24px}
+  .final{height:auto;min-height:640px;padding-block:96px}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0ms!important}
-  .js .rv{opacity:1;transform:none}
-  .marquee-track{animation:none}
-  .marquee{overflow-x:auto}
-  .slide.on>img{animation:none}
+  *,*::before,*::after{transition-duration:.001ms!important;animation-duration:.001ms!important}
 }
+@media print{.anim .rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -430,231 +256,131 @@ section[id]{scroll-margin-top:72px}
   <defs>
     <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0Z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
-    <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
     <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5ZM3 12.5l9 5 9-5"/></symbol>
     <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19M10 11a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4ZM20 19v-1.5a3.5 3.5 0 0 0-2.5-3.3M15.5 4.8a3.2 3.2 0 0 1 0 6.1"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"/></symbol>
-    <symbol id="i-compass" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM15.5 8.5l-2 5-5 2 2-5 5-2Z"/></symbol>
     <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3ZM18 16l.8 2.2L21 19l-2.2.8L18 22l-.8-2.2L15 19l2.2-.8L18 16Z"/></symbol>
     <symbol id="i-user" viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4.5 20a7.5 7.5 0 0 1 15 0"/></symbol>
-    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6L13 3Z"/></symbol>
     <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
-    <symbol id="i-target" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z"/><circle cx="12" cy="12" r=".6"/></symbol>
-    <symbol id="i-flow" viewBox="0 0 24 24"><path d="M4 7h8M18 7h2M4 17h2M12 17h8"/><circle cx="15" cy="7" r="2.2"/><circle cx="9" cy="17" r="2.2"/></symbol>
     <symbol id="i-asterisk" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></symbol>
   </defs>
 </svg>
 
-<a class="skip" href="#main">Zum Inhalt springen</a>
-
-<!-- Navigation -->
+<!-- 1 · Navigation -->
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="logo" href="#top" aria-label="upgr8 – zur Startseite"><img src="https://upgr8.org/wp-content/uploads/2025/05/Upgr8-Logo_Schwarz_Ohne_Rand.svg" alt="upgr8 Logo" width="110" height="30"></a>
     <nav class="nav-links" aria-label="Hauptnavigation">
-      <div class="dd" id="dd">
-        <button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="dd-menu">Für wen <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
-        <div class="dd-menu" id="dd-menu">
-          <a href="#fuer-inhaber" data-router="inhaber">Für Inhaber &amp; Geschäftsführung</a>
-          <a href="#fuer-pe" data-router="pe">Für Private Equity</a>
-          <a href="#fuer-banken" data-router="banken">Für Banken &amp; Finanzinstitute</a>
-          <a href="#fuer-konzerne" data-router="konzerne">Für Konzerne &amp; Industrie</a>
-        </div>
-      </div>
+      <a href="#fuer-wen">Für wen</a>
       <a href="#methode">Wie wir arbeiten</a>
-      <a href="#ergebnisse">Ergebnisse</a>
       <a href="#team">Team</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
     <div class="nav-right">
-      <div class="lang" aria-label="Sprache"><a href="#" aria-current="true">DE</a><span aria-hidden="true">/</span><a href="#" lang="en">EN</a></div>
-      <a class="btn" href="#erstgespraech" data-cta="nav">Erstgespräch buchen <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="btn" href="#kontakt" data-cta="nav">Erstgespräch buchen <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
       <button class="burger" id="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mmenu"><span></span><span></span><span></span></button>
     </div>
   </div>
   <nav class="mmenu" id="mmenu" aria-label="Mobile Navigation">
     <a href="#fuer-wen">Für wen</a>
-    <div class="sub">
-      <a href="#fuer-inhaber" data-router="inhaber">Für Inhaber &amp; Geschäftsführung</a>
-      <a href="#fuer-pe" data-router="pe">Für Private Equity</a>
-      <a href="#fuer-banken" data-router="banken">Für Banken &amp; Finanzinstitute</a>
-      <a href="#fuer-konzerne" data-router="konzerne">Für Konzerne &amp; Industrie</a>
-    </div>
     <a href="#methode">Wie wir arbeiten</a>
-    <a href="#ergebnisse">Ergebnisse</a>
     <a href="#team">Team</a>
-    <div class="lang"><a href="#" aria-current="true">DE</a><span aria-hidden="true">/</span><a href="#" lang="en">EN</a></div>
+    <a href="#kontakt">Kontakt</a>
   </nav>
 </header>
 
 <main id="main">
 
-<!-- 1 · Hero -->
+<!-- 2 · Hero -->
 <section class="hero" id="top" aria-labelledby="hero-h">
   <img class="hero-img" src="https://upgr8.org/wp-content/uploads/2025/09/Team1.jpeg" alt="Die fünf Partner von upgr8 stehen nebeneinander vor hellem Hintergrund" fetchpriority="high" width="8256" height="2940">
   <div class="hero-shade" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <span class="eyebrow"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Beratung für Strategie, Führung und Umsetzung</span>
       <h1 class="h1" id="hero-h">Ihre Strategie ist gut. Sie kommt nur nicht im Alltag an.</h1>
-      <p class="hero-sub">Weil die Menschen, die sie umsetzen sollen, nie mitgedacht haben. Wir ändern genau das: mit Ihren Leuten, in Wochen statt Monaten, begleitet bis zur Wirkung.</p>
+      <p>Wir bringen sie dorthin: gemeinsam mit den Menschen, die sie umsetzen. In Wochen statt Monaten.</p>
     </div>
-    <div class="hero-side">
-      <div class="glass" id="scenes" aria-live="off">
-        <div class="scenes">
-          <div class="scene on" id="sc1" role="tabpanel"><h2>Die Klausur war gut.</h2><p>Alle waren sich einig. Drei Monate später fragt keiner mehr danach.</p></div>
-          <div class="scene" id="sc2" role="tabpanel"><h2>Der Plan ist beschlossen.</h2><p>Trotzdem landet jede wichtige Frage wieder ganz oben, auf Ihrem Tisch.</p></div>
-          <div class="scene" id="sc3" role="tabpanel"><h2>Alle reden über Veränderung.</h2><p>KI, neue Märkte, neue Strukturen. Ihre Leute nicken und machen weiter wie bisher.</p></div>
-        </div>
-        <div class="marks" role="tablist" aria-label="Szenen">
-          <button type="button" role="tab" aria-selected="true" aria-controls="sc1">01</button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="sc2">02</button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="sc3">03</button>
-        </div>
-        <div class="bar" aria-hidden="true"><i id="bar"></i></div>
-      </div>
-      <div class="hero-cta">
-        <a class="btn btn--light" href="#erstgespraech" data-cta="hero">Erstgespräch mit Armin Blassnig buchen <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
-        <small>30 Minuten · unverbindlich · persönlich</small>
-        <a class="tlink" href="https://checkup.upgr8.org/presentation">Erst selbst prüfen? Zum check_up <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
-      </div>
+    <div class="hero-cta">
+      <a class="btn btn--light" href="#kontakt" data-cta="hero">Erstgespräch mit Armin Blassnig buchen <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <small>30 Minuten · unverbindlich · persönlich</small>
     </div>
   </div>
 </section>
 
-<!-- 2 · Autorität und Preis des Wartens -->
-<section class="section center" id="autoritaet" aria-labelledby="auth-h">
+<!-- 3 · Statement & Zahlen -->
+<section class="section statement center" id="statement" aria-labelledby="stmt-h">
   <div class="wrap">
     <span class="eyebrow rv"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Wer bei uns am Tisch sitzt</span>
-    <h2 class="big-sentence rv" id="auth-h">Unternehmer und Top-Manager <span class="pill-inline" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span> beraten Unternehmer: ehemals Vice President bei Apple und Nokia, Partner bei Roland Berger, 20+ Jahre Finanzsektor.</h2>
+    <h2 class="stmt rv" id="stmt-h">Unternehmer und Top-Manager <span class="pill-inline" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span> beraten Unternehmer. Mit Erfahrung als Vice President bei Apple und Nokia, als Partner bei Roland Berger und aus 20+ Jahren im Finanzsektor.</h2>
     <div class="avatars rv">
-      <img src="https://upgr8.org/wp-content/uploads/2025/09/Armin-1.jpg" alt="Armin Blassnig" loading="lazy" width="56" height="56">
-      <img src="https://upgr8.org/wp-content/uploads/2025/09/Max-2.jpg" alt="Maximilian Kammerer" loading="lazy" width="56" height="56">
-      <img src="https://upgr8.org/wp-content/uploads/2025/09/David-R-2.jpg" alt="David Rohrmann" loading="lazy" width="56" height="56">
-      <img src="https://upgr8.org/wp-content/uploads/2025/09/Daniel-2.jpg" alt="Daniel Deuring" loading="lazy" width="56" height="56">
-      <img src="https://upgr8.org/wp-content/uploads/2025/09/David-K-2.jpg" alt="David Kreiner" loading="lazy" width="56" height="56">
-      <a href="#team" aria-label="Alle Partner ansehen">+</a>
+      <img src="https://upgr8.org/wp-content/uploads/2025/09/Armin-1.jpg" alt="Armin Blassnig" loading="lazy" width="48" height="48">
+      <img src="https://upgr8.org/wp-content/uploads/2025/09/Max-2.jpg" alt="Maximilian Kammerer" loading="lazy" width="48" height="48">
+      <img src="https://upgr8.org/wp-content/uploads/2025/09/David-R-2.jpg" alt="David Rohrmann" loading="lazy" width="48" height="48">
+      <img src="https://upgr8.org/wp-content/uploads/2025/09/Daniel-2.jpg" alt="Daniel Deuring" loading="lazy" width="48" height="48">
+      <img src="https://upgr8.org/wp-content/uploads/2025/09/David-K-2.jpg" alt="David Kreiner" loading="lazy" width="48" height="48">
+      <a href="#team" aria-label="Zum Team">+</a>
     </div>
-    <p class="avatars-note rv">Erfahrung unserer Berater aus Projekten mit Raiffeisen, Agrana, Airbus, Daimler, Mercedes-Benz, Beneo, Blue Tomato und Raps</p>
-
-    <div class="logos rv">
-      <ul class="logo-row" id="logo-row">
-        <li class="lg"><img src="https://upgr8.org/wp-content/uploads/2025/05/Giebelkreuz_-RGB-2c-1.png" alt="Logo Raiffeisen" loading="lazy" style="width:115px;left:3px;top:-36px"></li>
-        <li class="lg opq"><img src="https://upgr8.org/wp-content/uploads/2025/05/Agrana-Logo.png" alt="Logo Agrana" loading="lazy" style="width:44px;left:40px;top:0"></li>
-        <li class="lg"><img src="https://upgr8.org/wp-content/uploads/2025/05/Airbus-logo.png" alt="Logo Airbus" loading="lazy" style="width:127px;left:-4px;top:-42px"></li>
-        <li class="lg"><img src="https://upgr8.org/wp-content/uploads/2025/05/Daimler_AG-logo.png" alt="Logo Daimler" loading="lazy" style="width:127px;left:-4px;top:-42px"></li>
-        <li class="lg"><img src="https://upgr8.org/wp-content/uploads/2025/05/Blue-Tomato.-logo-1.png" alt="Logo Blue Tomato" loading="lazy" style="width:118px;left:1px;top:-33px"></li>
-        <li class="lg"><img src="https://upgr8.org/wp-content/uploads/2025/05/beneo.png" alt="Logo Beneo" loading="lazy" style="width:126px;left:-3px;top:-37px"></li>
-        <li class="lg"><img src="https://upgr8.org/wp-content/uploads/2025/05/Mercedes-Logo-1.png" alt="Logo Mercedes-Benz" loading="lazy" style="width:91px;left:14px;top:-23px"></li>
-        <li class="lg opq"><img src="https://upgr8.org/wp-content/uploads/2025/05/Raps-logo.jpg" alt="Logo Raps" loading="lazy" style="width:91px;left:14px;top:-24px"></li>
-      </ul>
-      <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marq"></div></div>
-    </div>
-
-    <h2 class="h2 cost-h rv">Was es kostet, wenn nichts passiert.</h2>
-    <div class="stats" data-stagger>
+    <p class="avatars-note rv">Fünf Partner. Keine Junior-Berater.</p>
+    <div class="stats">
       <div class="stat rv"><div class="stat-n"><span class="num" data-to="77">77</span> %</div><p>der Familienunternehmen sagen: Strategische Projekte werden vom Tagesgeschäft verdrängt.</p><div class="dots" aria-hidden="true"><i class="a"></i><i></i><i></i></div></div>
       <div class="stat rv"><div class="stat-n"><span class="num" data-to="11">11</span> %</div><p>sagen: Unsere Mitarbeitenden verstehen die Strategie wirklich.</p><div class="dots" aria-hidden="true"><i></i><i class="a"></i><i></i></div></div>
-      <div class="stat rv"><div class="stat-n"><span class="num" data-to="10">10</span> %</div><p>der Beschäftigten in Deutschland fühlen sich ihrem Arbeitgeber emotional stark verbunden.</p><div class="dots" aria-hidden="true"><i></i><i></i><i class="a"></i></div></div>
+      <div class="stat rv"><div class="stat-n"><span class="num" data-to="10">10</span> %</div><p>der Beschäftigten fühlen sich ihrem Arbeitgeber emotional stark verbunden.</p><div class="dots" aria-hidden="true"><i></i><i></i><i class="a"></i></div></div>
     </div>
-    <p class="source rv">Dr. Wieselhuber &amp; Partner, Studie mit 116 Familienunternehmen (2026) · Gallup Engagement Index 2025</p>
-    <div class="core rv">
-      <strong>Jedes Quartal, in dem Ihre Strategie im Alltag wartet, entscheidet der Wettbewerb für Sie.</strong>
-      <p>Und jede Klausur ohne Umsetzung kostet zweimal: das Geld und das Vertrauen Ihres Teams in die nächste.</p>
-    </div>
+    <p class="source rv">Dr. Wieselhuber &amp; Partner, Studie mit 116 Familienunternehmen (2026) · Gallup Engagement Index Deutschland 2025</p>
   </div>
 </section>
 
-<!-- 3 · Die Suche hat ein Ende -->
+<!-- 4 · Die Suche hat ein Ende -->
 <section class="section" id="suche" aria-labelledby="suche-h">
   <div class="wrap">
-    <div class="head center">
-      <span class="eyebrow rv"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Die Suche hat ein Ende</span>
-      <h2 class="h2 rv" id="suche-h">Sie haben schon einiges versucht?</h2>
-      <p class="lead rv">Eine Klausur. Einen Berater. Ein Führungstraining. Vielleicht ein KI-Projekt. Und trotzdem ist im Alltag wenig davon geblieben.</p>
+    <div class="head center rv">
+      <span class="eyebrow"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Die Suche hat ein Ende</span>
+      <h2 class="h2" id="suche-h">Sie haben schon einiges versucht?</h2>
+      <p class="lead">Eine Klausur, einen Berater, ein Training. Und trotzdem ist im Alltag wenig davon geblieben.</p>
+      <a class="btn" href="#kontakt" data-cta="suche" style="margin-top:8px">Erstgespräch buchen <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
     </div>
-    <div class="cards6" data-stagger>
-      <article class="scard rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg></span><h3>Große Strategieberatung</h3><span class="lbl">Warum es nicht hält</span><p class="why">Das Konzept entsteht ohne Ihr Team. Danach wird die Umsetzung übergeben, und die Berater sind weg.</p><hr><span class="lbl how-l">So arbeiten wir</span><p class="how">Ihr Team entwickelt mit. Wir bleiben, bis Ergebnisse sichtbar sind.</p></article>
-      <article class="scard rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></span><h3>Klausur mit Moderator</h3><span class="lbl">Warum es nicht hält</span><p class="why">Nur die Spitze war dabei. Ab Montag gewinnt das Tagesgeschäft.</p><hr><span class="lbl how-l">So arbeiten wir</span><p class="how">Alle Ebenen denken mit. Umsetzung ist Teil des Plans.</p></article>
-      <article class="scard rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><h3>Führungskräfte-Training</h3><span class="lbl">Warum es nicht hält</span><p class="why">Gelernt wird an Fallbeispielen, nicht an Ihren Herausforderungen.</p><hr><span class="lbl how-l">So arbeiten wir</span><p class="how">Führung entwickelt sich an Ihrer echten Strategie.</p></article>
-      <article class="scard rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg></span><h3>KI-Tool oder Agentur</h3><span class="lbl">Warum es nicht hält</span><p class="why">Ein Einzelprojekt ohne Strategie. Die Leute nutzen es nicht.</p><hr><span class="lbl how-l">So arbeiten wir</span><p class="how">KI wird Teil der Strategie, die alle mittragen.</p></article>
-      <article class="scard rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></span><h3>Selbst machen</h3><span class="lbl">Warum es nicht hält</span><p class="why">Es läuft wieder über Sie. Genau das, was entlasten sollte.</p><hr><span class="lbl how-l">So arbeiten wir</span><p class="how">Sie entscheiden. Aber Sie tragen es nicht allein.</p></article>
-      <article class="scard scard--dark rv"><h3>Das liegt nicht an Ihnen.</h3><p>Alle diese Wege haben denselben blinden Fleck: Die Menschen, die umsetzen sollen, waren nicht dabei. Wir setzen genau dort an. <strong>Deshalb kann Ihre Suche hier enden.</strong></p><a class="btn btn--light btn--coral" href="#erstgespraech" data-cta="suche">Erstgespräch buchen <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></article>
+    <div class="cards">
+      <article class="card rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg></span><h3>Große Strategieberatung</h3><p>Das Konzept entsteht ohne Ihr Team. Danach sind die Berater weg.</p></article>
+      <article class="card rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></span><h3>Klausur mit Moderator</h3><p>Nur die Spitze war dabei. Ab Montag gewinnt das Tagesgeschäft.</p></article>
+      <article class="card rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><h3>Führungskräfte-Training</h3><p>Gelernt wird an Fallbeispielen, nicht an Ihren echten Herausforderungen.</p></article>
+      <article class="card rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg></span><h3>KI-Tool oder Agentur</h3><p>Ein Einzelprojekt ohne Strategie. Die Leute nutzen es nicht.</p></article>
+      <article class="card rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></span><h3>Selbst machen</h3><p>Es läuft wieder über Ihren Tisch. Genau das, was entlasten sollte.</p></article>
+      <article class="card card--dark rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg></span><h3>Was alle gemeinsam haben</h3><p>Die Menschen, die umsetzen sollen, waren nicht dabei. Genau dort setzen wir an.</p></article>
     </div>
   </div>
 </section>
 
-<!-- 4 · Der blinde Fleck -->
-<section class="blind" id="blinder-fleck" aria-labelledby="blind-h">
-  <img class="blind-bg" src="https://upgr8.org/wp-content/uploads/2025/05/stage.png" alt="Eine Brücke im Nebel als Bild für den blinden Fleck" loading="lazy">
-  <img class="cloud c1" data-speed="0.18" src="https://upgr8.org/wp-content/uploads/2017/06/cloud1.png" alt="" loading="lazy" aria-hidden="true">
-  <img class="cloud c2" data-speed="0.32" src="https://upgr8.org/wp-content/uploads/2017/06/cloud2.png" alt="" loading="lazy" aria-hidden="true">
-  <img class="cloud c3" data-speed="0.5" src="https://upgr8.org/wp-content/uploads/2017/06/cloud3.png" alt="" loading="lazy" aria-hidden="true">
-  <div class="wrap blind-in">
-    <div class="bl-lines" data-stagger="320">
-      <p class="rv">Ihr Vertrieb weiß, warum Kunden abspringen.</p>
-      <p class="rv">Ihre Teamleitungen wissen, wo jeden Tag Zeit verloren geht.</p>
-      <p class="rv">Ihre jüngsten Leute wissen, welche Tools längst keiner mehr nutzt.</p>
-    </div>
-    <h2 class="h2 rv" id="blind-h" style="--d:200ms">In der Strategieklausur sitzt keiner von ihnen.</h2>
-    <p class="lead rv" style="--d:300ms">Die besten Antworten für Ihr Unternehmen gibt es meist schon. Sie stecken in den Köpfen Ihrer Leute. Wir holen sie heraus und machen daraus Entscheidungen. Wir nennen das kollektive Intelligenz.</p>
-  </div>
-</section>
-
-<!-- 5 · Die eine Lösung -->
-<section class="section" id="methode" aria-labelledby="sol-h">
-  <div class="wrap">
-    <div class="sol-top">
-      <div class="head">
-        <span class="eyebrow rv"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Die Innensicht-Methode</span>
-        <h2 class="h2 rv" id="sol-h">Ihre Leute denken mit. Sie entscheiden.</h2>
-        <p class="lead rv">Von der Innensicht zum Handeln: Wir drehen die Reihenfolge um. Erst das Wissen Ihrer Organisation, dann die Entscheidung, dann die Umsetzung durch die, die mitgedacht haben.</p>
-      </div>
-      <svg class="ic asterisk" aria-hidden="true"><use href="#i-asterisk"/></svg>
-    </div>
-    <div class="sol-grid">
-      <div class="acc" id="acc1">
-        <div class="acc-item open"><h3><button class="acc-h" type="button" aria-expanded="true" aria-controls="ap1" id="ah1"><span class="acc-n">01</span><span class="acc-t">Energie entfachen</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="ap1" role="region" aria-labelledby="ah1"><div><p>Wir holen Ihre Leute an Bord und das Wissen aus allen Ebenen auf den Tisch, nicht nur aus der Geschäftsführung.</p></div></div></div>
-        <div class="acc-item"><h3><button class="acc-h" type="button" aria-expanded="false" aria-controls="ap2" id="ah2"><span class="acc-n">02</span><span class="acc-t">Zielbild entwickeln</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="ap2" role="region" aria-labelledby="ah2"><div><p>Wir verdichten alles zu wenigen, klaren Prioritäten mit konkreten Maßnahmen. Sie entscheiden.</p></div></div></div>
-        <div class="acc-item"><h3><button class="acc-h" type="button" aria-expanded="false" aria-controls="ap3" id="ah3"><span class="acc-n">03</span><span class="acc-t">Umsetzung sichern</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="ap3" role="region" aria-labelledby="ah3"><div><p>Eine Roadmap, die festlegt, wer was bis wann tut. Getragen von denen, die sie gebaut haben.</p></div></div></div>
-        <div class="acc-item"><h3><button class="acc-h" type="button" aria-expanded="false" aria-controls="ap4" id="ah4"><span class="acc-n">04</span><span class="acc-t">Begleiten bis zur Wirkung</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="ap4" role="region" aria-labelledby="ah4"><div><p>Wir bleiben, bis Ergebnisse im Alltag sichtbar sind. Mit Partnern am Tisch, nicht mit Junior-Beratern.</p></div></div></div>
-      </div>
-      <div class="sol-media" id="solmedia">
-        <img class="on" src="https://upgr8.org/wp-content/uploads/2025/09/2.jpg" alt="Übereinandergelegte Hände auf einem hellen Tisch als Zeichen des gemeinsamen Starts" loading="lazy">
-        <img src="https://upgr8.org/wp-content/uploads/2025/10/header.png" alt="Tablet mit der check_up-Auswertung" loading="lazy">
-        <img src="https://upgr8.org/wp-content/uploads/2025/09/7.jpg" alt="Übereinandergelegte Hände auf hellem Tisch, entsättigt" loading="lazy">
-        <img src="https://upgr8.org/wp-content/uploads/2025/09/Armin-1.jpg" alt="Armin Blassnig, Geschäftsführer von upgr8" loading="lazy">
-      </div>
-    </div>
-    <div class="promises" data-stagger>
-      <div class="promise rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><h3>Mit Ihren Leuten.</h3><p>Ihre Teams entwickeln mit. Deshalb tragen sie die Strategie.</p></div>
-      <div class="promise rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></span><h3>Schnell spürbar.</h3><p>Klare Prioritäten in Wochen, nicht in Monaten. [Dauer bestätigen]</p></div>
-      <div class="promise rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg></span><h3>Alles hängt zusammen.</h3><p>Strategie, Führung und Abläufe greifen ineinander.</p></div>
-    </div>
-    <div class="sol-cta rv"><a class="btn" href="#erstgespraech" data-cta="loesung">Erstgespräch mit Armin Blassnig buchen <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div>
-  </div>
-</section>
-
-<!-- 6 · Wo stehen Sie gerade? -->
-<section id="fuer-wen" aria-labelledby="router-h">
-  <h2 class="sr-only" id="router-h">Für wen wir arbeiten: Wo stehen Sie gerade?</h2>
+<!-- 5 · Für wen -->
+<section id="fuer-wen" aria-label="Für wen wir arbeiten">
   <div class="router" id="router" role="region" aria-roledescription="Karussell" aria-label="Zielgruppen">
-    <div class="router-eyebrow"><div class="wrap"><span class="eyebrow"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Für wen wir arbeiten · Wo stehen Sie gerade?</span></div></div>
-    <div class="slide on" aria-label="1 von 4">
-      <img src="https://upgr8.org/wp-content/uploads/2025/06/strategy.png" alt="Rote Punktspirale auf schwarzem Grund" loading="lazy">
-      <div class="slide-in"><div class="wrap" style="position:relative;height:100%"><div class="slide-copy"><h3 class="h3">Wir wachsen, aber alles hängt an der Spitze.</h3><p class="aud">Für Inhaber &amp; Geschäftsführung</p></div><a class="btn btn--light slide-pill" href="#fuer-inhaber" data-router="inhaber" id="fuer-inhaber">Mehr erfahren <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div></div>
+    <div class="slide on" id="fuer-inhaber" aria-label="1 von 4">
+      <img src="https://framerusercontent.com/images/xhKK6BJOxXOQVn2MQhlNESFvFg4.jpg" alt="Handschlag zwischen Berater und Kunde" loading="lazy">
+      <div class="slide-in"><div class="wrap" style="position:relative;height:100%">
+        <div class="slide-copy"><span class="eyebrow"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Wo stehen Sie gerade?</span><h2 class="h2">Für Inhaber &amp; Geschäftsführung</h2><p>Ihr Unternehmen ist gewachsen, aber jede wichtige Entscheidung landet noch auf Ihrem Tisch. Wir machen Ihr Führungsteam zum Motor, Sie behalten das letzte Wort.</p></div>
+        <a class="btn btn--light slide-pill" href="#fuer-inhaber" data-router="inhaber">Mehr erfahren <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      </div></div>
     </div>
-    <div class="slide" aria-label="2 von 4" inert>
-      <img src="https://upgr8.org/wp-content/uploads/2025/06/operations_header.png" alt="Blaue Punktwelle auf schwarzem Grund" loading="lazy">
-      <div class="slide-in"><div class="wrap" style="position:relative;height:100%"><div class="slide-copy"><h3 class="h3">Wir haben zugekauft. Jetzt muss der Wertsteigerungsplan greifen.</h3><p class="aud">Für Private Equity</p></div><a class="btn btn--light slide-pill" href="#fuer-pe" data-router="pe" id="fuer-pe">Mehr erfahren <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div></div>
+    <div class="slide" id="fuer-pe" aria-label="2 von 4" inert>
+      <img src="https://framerusercontent.com/images/FbEPhju4frrLsaQdU4jz1bVFCc.jpg" alt="Berater prüfen gemeinsam Unterlagen" loading="lazy">
+      <div class="slide-in"><div class="wrap" style="position:relative;height:100%">
+        <div class="slide-copy"><span class="eyebrow"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Wo stehen Sie gerade?</span><h2 class="h2">Für Private Equity</h2><p>Der Value-Creation-Plan steht, jetzt muss das Management ihn tragen. Wir bringen Ihre Beteiligung vom Plan in die Umsetzung, in Ihrem Zeitfenster.</p></div>
+        <a class="btn btn--light slide-pill" href="#fuer-pe" data-router="pe">Mehr erfahren <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      </div></div>
     </div>
-    <div class="slide" aria-label="3 von 4" inert>
-      <img src="https://upgr8.org/wp-content/uploads/2025/06/Ladership-Intro-Bild-1.png" alt="Grüne Partikelwelle auf schwarzem Grund" loading="lazy">
-      <div class="slide-in"><div class="wrap" style="position:relative;height:100%"><div class="slide-copy"><h3 class="h3">Fusion, neue Strategieperiode, neue Strukturen.</h3><p class="aud">Für Banken &amp; Finanzinstitute</p></div><a class="btn btn--light slide-pill" href="#fuer-banken" data-router="banken" id="fuer-banken">Mehr erfahren <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div></div>
+    <div class="slide" id="fuer-banken" aria-label="3 von 4" inert>
+      <img src="https://framerusercontent.com/images/yH6RH6arhzdpURUxPKxbOSpyk.jpg" alt="Berater im Besprechungsraum mit einem Kunden" loading="lazy">
+      <div class="slide-in"><div class="wrap" style="position:relative;height:100%">
+        <div class="slide-copy"><span class="eyebrow"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Wo stehen Sie gerade?</span><h2 class="h2">Für Banken &amp; Finanzinstitute</h2><p>Fusion beschlossen, Strategie verabschiedet. Jetzt muss das ganze Haus sie leben, so wie bei der Raiffeisen-Bankengruppe Steiermark.</p></div>
+        <a class="btn btn--light slide-pill" href="#fuer-banken" data-router="banken">Mehr erfahren <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      </div></div>
     </div>
-    <div class="slide dark" aria-label="4 von 4" inert>
-      <img src="https://upgr8.org/wp-content/uploads/2025/05/stage.png" alt="Eine Brücke im Nebel" loading="lazy">
-      <div class="slide-in"><div class="wrap" style="position:relative;height:100%"><div class="slide-copy"><h3 class="h3">Unser Geschäftsmodell verändert sich. Die Organisation muss mit.</h3><p class="aud">Für Konzerne &amp; Industrie</p></div><a class="btn btn--light slide-pill" href="#fuer-konzerne" data-router="konzerne" id="fuer-konzerne">Mehr erfahren <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div></div>
+    <div class="slide" id="fuer-konzerne" aria-label="4 von 4" inert>
+      <img src="https://framerusercontent.com/images/wAuq6Ib55TLjihN1GLTn1aLVJg.png" alt="Berater in einem Windpark" loading="lazy">
+      <div class="slide-in"><div class="wrap" style="position:relative;height:100%">
+        <div class="slide-copy"><span class="eyebrow"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Wo stehen Sie gerade?</span><h2 class="h2">Für Konzerne &amp; Industrie</h2><p>Ihr Geschäftsmodell verändert sich schneller als Ihre Organisation. Wir machen Transformation zur Sache Ihrer Leute.</p></div>
+        <a class="btn btn--light slide-pill" href="#fuer-konzerne" data-router="konzerne">Mehr erfahren <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      </div></div>
     </div>
     <div class="pager">
       <button class="prev" type="button" aria-label="Vorherige Folie"><svg viewBox="0 0 44 12" aria-hidden="true"><path d="M43 6H2M7 1 2 6l5 5"/></svg></button>
@@ -662,87 +388,69 @@ section[id]{scroll-margin-top:72px}
       <button class="next" type="button" aria-label="Nächste Folie"><svg viewBox="0 0 44 12" aria-hidden="true"><path d="M1 6h41M37 1l5 5-5 5"/></svg></button>
     </div>
   </div>
-  <p class="router-after">Ihre Situation ist eine andere? <a href="#erstgespraech">Erzählen Sie sie uns im Erstgespräch <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a></p>
 </section>
 
-<!-- 7 · Beweis -->
-<section class="section team" id="team" aria-labelledby="team-h">
+<!-- 6 · Die Methode -->
+<section class="section" id="methode" aria-labelledby="sol-h">
   <div class="wrap">
-    <div class="head center">
-      <span class="eyebrow rv"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Team</span>
-      <h2 class="h2 rv" id="team-h">Bei uns sitzen keine Junior-Berater am Tisch.</h2>
-      <p class="lead rv">Sie arbeiten direkt mit Unternehmern und Top-Managern, die selbst Strategien verantwortet und umgesetzt haben.</p>
+    <div class="sol-top">
+      <div class="head rv">
+        <span class="eyebrow"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Die Innensicht-Methode</span>
+        <h2 class="h2" id="sol-h">Ihre Leute denken mit. Sie entscheiden.</h2>
+      </div>
+      <svg class="ic star-deco" aria-hidden="true"><use href="#i-asterisk"/></svg>
     </div>
-    <div class="team-grid" data-stagger>
-      <article class="tcard rv"><div class="tp"><div class="tp-img"><img src="https://upgr8.org/wp-content/uploads/2025/09/Armin-1-1.jpg" alt="Armin Blassnig, Geschäftsführer, Schwarzweiß-Porträt" loading="lazy"><img class="col" src="https://upgr8.org/wp-content/uploads/2025/09/Armin-1.jpg" alt="Armin Blassnig, Geschäftsführer, Farbporträt" loading="lazy"></div><a class="tp-btn" href="#erstgespraech" aria-label="Erstgespräch mit Armin Blassnig"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><h3>Armin Blassnig<span>Geschäftsführer</span></h3><p class="fy">Für Sie heißt das: [ein Satz]</p></article>
-      <article class="tcard rv"><div class="tp"><div class="tp-img"><img src="https://upgr8.org/wp-content/uploads/2025/09/Max-1.jpg" alt="Maximilian Kammerer, Senior Advisor, Schwarzweiß-Porträt" loading="lazy"><img class="col" src="https://upgr8.org/wp-content/uploads/2025/09/Max-2.jpg" alt="Maximilian Kammerer, Senior Advisor, Farbporträt" loading="lazy"></div><a class="tp-btn" href="#erstgespraech" aria-label="Erstgespräch mit Maximilian Kammerer"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><h3>Maximilian Kammerer<span>Senior Advisor</span></h3><p class="fy">Für Sie heißt das: [ein Satz]</p></article>
-      <article class="tcard rv"><div class="tp"><div class="tp-img"><img src="https://upgr8.org/wp-content/uploads/2025/09/David-R-1.jpg" alt="David Rohrmann, Managing Partner, Schwarzweiß-Porträt" loading="lazy"><img class="col" src="https://upgr8.org/wp-content/uploads/2025/09/David-R-2.jpg" alt="David Rohrmann, Managing Partner, Farbporträt" loading="lazy"></div><a class="tp-btn" href="#erstgespraech" aria-label="Erstgespräch mit David Rohrmann"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><h3>David Rohrmann<span>Managing Partner</span></h3><p class="fy">Für Sie heißt das: [ein Satz]</p></article>
-      <article class="tcard rv"><div class="tp"><div class="tp-img"><img src="https://upgr8.org/wp-content/uploads/2025/09/Daniel-1.jpg" alt="Daniel Deuring, Managing Partner, Schwarzweiß-Porträt" loading="lazy"><img class="col" src="https://upgr8.org/wp-content/uploads/2025/09/Daniel-2.jpg" alt="Daniel Deuring, Managing Partner, Farbporträt" loading="lazy"></div><a class="tp-btn" href="#erstgespraech" aria-label="Erstgespräch mit Daniel Deuring"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><h3>Daniel Deuring<span>Managing Partner</span></h3><p class="fy">Für Sie heißt das: [ein Satz]</p></article>
-      <article class="tcard rv"><div class="tp"><div class="tp-img"><img src="https://upgr8.org/wp-content/uploads/2025/09/David-K-1.jpg" alt="David Kreiner, Managing Partner, Schwarzweiß-Porträt" loading="lazy"><img class="col" src="https://upgr8.org/wp-content/uploads/2025/09/David-K-2.jpg" alt="David Kreiner, Managing Partner, Farbporträt" loading="lazy"></div><a class="tp-btn" href="#erstgespraech" aria-label="Erstgespräch mit David Kreiner"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><h3>David Kreiner<span>Managing Partner</span></h3><p class="fy">Für Sie heißt das: [ein Satz]</p></article>
+    <div class="sol-grid">
+      <div class="acc" id="acc">
+        <div class="acc-item open"><h3><button class="acc-h" type="button" aria-expanded="true" aria-controls="ap1" id="ah1"><span class="acc-n">01</span><span class="acc-t">Energie entfachen</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="ap1" role="region" aria-labelledby="ah1"><p>Wir holen das Wissen aus allen Ebenen Ihres Unternehmens auf den Tisch, nicht nur aus der Geschäftsführung.</p></div></div>
+        <div class="acc-item"><h3><button class="acc-h" type="button" aria-expanded="false" aria-controls="ap2" id="ah2"><span class="acc-n">02</span><span class="acc-t">Zielbild entwickeln</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="ap2" role="region" aria-labelledby="ah2"><p>Wir verdichten es zu wenigen, klaren Prioritäten mit konkreten Maßnahmen. Die Entscheidung treffen Sie.</p></div></div>
+        <div class="acc-item"><h3><button class="acc-h" type="button" aria-expanded="false" aria-controls="ap3" id="ah3"><span class="acc-n">03</span><span class="acc-t">Umsetzung sichern</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="ap3" role="region" aria-labelledby="ah3"><p>Eine Roadmap, die festlegt, wer was bis wann tut. Getragen von denen, die sie mitentwickelt haben.</p></div></div>
+        <div class="acc-item"><h3><button class="acc-h" type="button" aria-expanded="false" aria-controls="ap4" id="ah4"><span class="acc-n">04</span><span class="acc-t">Begleiten bis zur Wirkung</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="ap4" role="region" aria-labelledby="ah4"><p>Wir bleiben, bis die Ergebnisse im Alltag sichtbar sind.</p></div></div>
+      </div>
+      <div class="sol-media" id="solmedia">
+        <img class="on" src="https://framerusercontent.com/images/OIcdK5drNousJ18ICoxUsu8bLPE.jpg" alt="Zwei Frauen besprechen etwas an einem Tablet" loading="lazy">
+        <img src="https://framerusercontent.com/images/rVv524FugxKxoYkvMCh3kWvh4.jpg" alt="Berater im Gespräch mit einem Kunden" loading="lazy">
+        <img src="https://framerusercontent.com/images/fDACnd8jOq6x0Mnw3alixbu3o.jpg" alt="Zwei Personen gehen im Gespräch über einen Flur" loading="lazy">
+        <img src="https://framerusercontent.com/images/egmZXec370FUW5XoWleEE9YPRX8.png" alt="Berater mit Ingenieuren im Labor" loading="lazy">
+      </div>
     </div>
+  </div>
+</section>
 
-    <figure class="testi rv">
-      <img src="https://upgr8.org/wp-content/uploads/2025/05/Ariane_Pfleger2025_058_c_lupi_spuma.jpg" alt="Dr. Ariane Pfleger lacht und lehnt vor einer grauen Wand" loading="lazy">
-      <figcaption class="testi-copy">
-        <blockquote>„Die Zusammenarbeit mit dem upgr8-Team ist sowohl äußerst produktiv als auch wirklich angenehm.“</blockquote>
-        <cite><strong>Dr. Ariane Pfleger</strong>Executive Director, Raiffeisen Landesbank Steiermark</cite>
+<!-- 7 · Team & Beweis -->
+<section class="section center" id="team" aria-labelledby="team-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Unser Team</span>
+      <h2 class="h2" id="team-h">Mit diesen Menschen arbeiten Sie.</h2>
+      <p class="lead">Unternehmer und Top-Manager, die Strategien selbst verantwortet und umgesetzt haben.</p>
+    </div>
+    <div class="team-grid">
+      <div class="rv"><div class="tp"><div class="tp-img"><img src="https://upgr8.org/wp-content/uploads/2025/09/Armin-1.jpg" alt="Armin Blassnig, Geschäftsführer" loading="lazy"></div><a class="tp-btn" href="#kontakt" aria-label="Erstgespräch mit Armin Blassnig"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><p class="tname"><b>Armin Blassnig</b> – Geschäftsführer</p></div>
+      <div class="rv"><div class="tp"><div class="tp-img"><img src="https://upgr8.org/wp-content/uploads/2025/09/Max-2.jpg" alt="Maximilian Kammerer, Senior Advisor" loading="lazy"></div><a class="tp-btn" href="#kontakt" aria-label="Erstgespräch buchen"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><p class="tname"><b>Maximilian Kammerer</b> – Senior Advisor</p></div>
+      <div class="rv"><div class="tp"><div class="tp-img"><img src="https://upgr8.org/wp-content/uploads/2025/09/David-R-2.jpg" alt="David Rohrmann, Managing Partner" loading="lazy"></div><a class="tp-btn" href="#kontakt" aria-label="Erstgespräch buchen"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><p class="tname"><b>David Rohrmann</b> – Managing Partner</p></div>
+      <div class="rv"><div class="tp"><div class="tp-img"><img src="https://upgr8.org/wp-content/uploads/2025/09/Daniel-2.jpg" alt="Daniel Deuring, Managing Partner" loading="lazy"></div><a class="tp-btn" href="#kontakt" aria-label="Erstgespräch buchen"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><p class="tname"><b>Daniel Deuring</b> – Managing Partner</p></div>
+      <div class="rv"><div class="tp"><div class="tp-img"><img src="https://upgr8.org/wp-content/uploads/2025/09/David-K-2.jpg" alt="David Kreiner, Managing Partner" loading="lazy"></div><a class="tp-btn" href="#kontakt" aria-label="Erstgespräch buchen"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><p class="tname"><b>David Kreiner</b> – Managing Partner</p></div>
+    </div>
+    <figure class="quote rv">
+      <blockquote>„Die Zusammenarbeit mit dem upgr8-Team ist sowohl äußerst produktiv als auch wirklich angenehm.“</blockquote>
+      <figcaption>
+        <div class="qwho"><img src="https://upgr8.org/wp-content/uploads/2025/05/Ariane_Pfleger2025_058_c_lupi_spuma-650x433.jpg" alt="Dr. Ariane Pfleger" loading="lazy" width="48" height="48"><div><b>Dr. Ariane Pfleger</b><span>Executive Director, Raiffeisen Landesbank Steiermark</span></div></div>
+        <p class="refs">Erfahrung aus Projekten mit Raiffeisen · Agrana · Airbus · Daimler · Mercedes-Benz · Beneo · Blue Tomato · Raps</p>
       </figcaption>
     </figure>
-
-    <div id="ergebnisse">
-      <h2 class="sr-only">Ergebnisse</h2>
-      <div class="cases cases-h" data-stagger>
-        <article class="case rv"><h3>Raiffeisen-Bankengruppe Steiermark<span>Whole System Change</span></h3><dl><div><dt>Ausgangslage</dt><dd>[Ausgangslage]</dd></div><div><dt>Vorgehen</dt><dd>[Vorgehen]</dd></div></dl><div class="res"><span class="lbl" style="margin-bottom:8px">Ergebnis</span><b>[Zahl]</b></div></article>
-        <article class="case rv"><h3>Blue Tomato<span>Recovery Strategy</span></h3><dl><div><dt>Ausgangslage</dt><dd>[Ausgangslage]</dd></div><div><dt>Vorgehen</dt><dd>[Vorgehen]</dd></div></dl><div class="res"><span class="lbl" style="margin-bottom:8px">Ergebnis</span><b>[Zahl]</b></div></article>
-        <article class="case rv"><h3>Agrana<span>Strategieentwicklung</span></h3><dl><div><dt>Ausgangslage</dt><dd>[Ausgangslage]</dd></div><div><dt>Vorgehen</dt><dd>[Vorgehen]</dd></div></dl><div class="res"><span class="lbl" style="margin-bottom:8px">Ergebnis</span><b>[Zahl]</b></div></article>
-      </div>
-      <div class="case-more rv"><a class="tlink" href="#ergebnisse">Alle Ergebnisse ansehen <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a></div>
-    </div>
   </div>
 </section>
 
-<!-- 8 · Wobei wir helfen -->
-<section class="section" id="hebel" aria-labelledby="hebel-h">
-  <div class="wrap">
-    <h2 class="h2 center rv" id="hebel-h" style="max-width:820px;margin-inline:auto">Drei Hebel. Ein Ziel: dass es im Alltag ankommt.</h2>
-    <div class="hebel" data-stagger>
-      <article class="hcard rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-compass"/></svg></span><h3>Strategie, die umgesetzt wird.</h3><p>Gemeinsam mit Ihren Leuten entwickelt, ohne überfrachtete Analysen, mit Roadmap und Begleitung bis zur Wirkung.</p><a class="tlink" href="https://upgr8.org/de/product/strategie-upgr8/">Strategie upgr8 <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
-      <article class="hcard rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg></span><h3>Führung und Kultur, die Veränderung tragen.</h3><p>Führungskräfte lernen an echten Herausforderungen, nicht im Seminar.</p><a class="tlink" href="https://upgr8.org/de/product/fuehrung-kultur-upgr8/">Führung &amp; Kultur upgr8 <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
-      <article class="hcard rv"><span class="cic"><svg class="ic" aria-hidden="true"><use href="#i-flow"/></svg></span><h3>Abläufe, die mitwachsen.</h3><p>Ursachen gemeinsam mit den Teams finden, pragmatisch lösen, ohne Overengineering.</p><a class="tlink" href="https://upgr8.org/de/product/operationen-upgr8/">Operations upgr8 <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
-    </div>
-  </div>
-</section>
-
-<!-- 9 · Häufige Fragen -->
-<section class="section faq" id="faq" aria-labelledby="faq-h">
-  <div class="wrap faq-wrap">
-    <h2 class="h2 center rv" id="faq-h">Häufige Fragen</h2>
-    <div class="acc rv" id="acc2">
-      <div class="acc-item open"><h3><button class="acc-h" type="button" aria-expanded="true" aria-controls="fp1" id="fh1"><span class="acc-t">Wie viel Zeit kostet das mein Team?</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="fp1" role="region" aria-labelledby="fh1"><div><p>Wir planen den Aufwand so, dass er neben dem Tagesgeschäft funktioniert. [Richtwert]</p></div></div></div>
-      <div class="acc-item"><h3><button class="acc-h" type="button" aria-expanded="false" aria-controls="fp2" id="fh2"><span class="acc-t">Wer entscheidet am Ende?</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="fp2" role="region" aria-labelledby="fh2"><div><p>Sie. Ihre Leute denken mit, die Entscheidung bleibt bei Ihnen.</p></div></div></div>
-      <div class="acc-item"><h3><button class="acc-h" type="button" aria-expanded="false" aria-controls="fp3" id="fh3"><span class="acc-t">Wie schnell sehen wir Ergebnisse?</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="fp3" role="region" aria-labelledby="fh3"><div><p>Klare Prioritäten in Wochen, nicht in Monaten. [Dauer]</p></div></div></div>
-      <div class="acc-item"><h3><button class="acc-h" type="button" aria-expanded="false" aria-controls="fp4" id="fh4"><span class="acc-t">Was, wenn mein Team nicht mitzieht?</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="fp4" role="region" aria-labelledby="fh4"><div><p>Genau deshalb binden wir es von Anfang an ein. Wer mitgedacht hat, zieht mit.</p></div></div></div>
-      <div class="acc-item"><h3><button class="acc-h" type="button" aria-expanded="false" aria-controls="fp5" id="fh5"><span class="acc-t">Was kostet das?</span><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button></h3><div class="acc-p" id="fp5" role="region" aria-labelledby="fh5"><div><p>Das hängt vom Umfang ab. Im Erstgespräch nennen wir Ihnen einen klaren Rahmen, bevor Sie sich entscheiden.</p></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 10 · Abschluss -->
-<section class="section final" id="erstgespraech" aria-labelledby="final-h">
-  <div class="wrap final-in">
-    <div class="final-copy">
-      <span class="eyebrow rv"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Erstgespräch</span>
-      <h2 class="h2 rv" id="final-h">In 30 Minuten wissen Sie, ob wir der richtige Partner sind.</h2>
-      <p class="rv">Kein Pitch. Sie schildern Ihre Situation, wir sagen Ihnen ehrlich, ob und wie wir helfen können.</p>
-      <a class="btn btn--light btn--coral btn--wrap rv" href="[Kalender-Link]" data-cta="abschluss">Erstgespräch mit Armin Blassnig buchen <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
-      <a class="tlink rv" href="https://checkup.upgr8.org/presentation">Lieber erst einschätzen? check_up starten <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
-    </div>
-    <div class="final-card rv">
-      <span class="badge"><i aria-hidden="true"></i>Antwortet persönlich</span>
-      <div class="tp"><div class="tp-img"><img src="https://upgr8.org/wp-content/uploads/2025/09/Armin-1.jpg" alt="Armin Blassnig, Geschäftsführer von upgr8" loading="lazy"></div><a class="tp-btn" href="[Kalender-Link]" aria-label="Erstgespräch mit Armin Blassnig buchen"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-      <h3>Armin Blassnig – <span style="display:inline;margin:0">Geschäftsführer</span></h3>
-    </div>
-  </div>
+<!-- 8 · Abschluss -->
+<section class="final" id="kontakt" aria-labelledby="final-h">
+  <img src="https://framerusercontent.com/images/LVAnZbJfAGQWO6U9d5CKQIrdYk.png" alt="Büro mit Blick auf die Skyline" loading="lazy">
+  <div class="wrap"><div class="final-in rv">
+    <span class="eyebrow"><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg>Erstgespräch</span>
+    <h2 class="h2" id="final-h">In 30 Minuten wissen Sie, ob wir der richtige Partner sind.</h2>
+    <p class="lead">Kein Pitch. Sie schildern Ihre Situation, Armin Blassnig sagt Ihnen ehrlich, ob und wie wir helfen können.</p>
+    <a class="btn btn--light" href="[Kalender-Link]" data-cta="kontakt">Erstgespräch mit Armin Blassnig buchen <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+  </div></div>
 </section>
 
 </main>
@@ -759,9 +467,8 @@ section[id]{scroll-margin-top:72px}
         <ul class="f-links">
           <li><a href="#fuer-wen">Für wen</a></li>
           <li><a href="#methode">Wie wir arbeiten</a></li>
-          <li><a href="#ergebnisse">Ergebnisse</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="#erstgespraech">Erstgespräch</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
           <li><a href="#impressum">Impressum</a></li>
           <li><a href="#datenschutz">Datenschutz</a></li>
         </ul>
@@ -770,18 +477,16 @@ section[id]{scroll-margin-top:72px}
         <h2 class="f-h">Impulse per Mail</h2>
         <form class="news" id="news" action="#" novalidate>
           <label class="sr-only" for="mail">E-Mail-Adresse</label>
-          <input id="mail" type="email" name="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" required>
+          <input id="mail" type="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" required>
           <button type="submit">Eintragen</button>
         </form>
         <p class="news-msg" id="news-msg" role="status"></p>
-        <address class="f-addr">Upgr8 GmbH · Aschergasse 25/2 · 1130 Wien<br><a href="tel:+436641441492">+43 664 144 1492</a> · <a href="mailto:getyour@upgr8.org">getyour@upgr8.org</a> · <a href="https://www.linkedin.com/company/upgr8-gmbh/" rel="noopener">LinkedIn</a></address>
+        <address class="f-addr">Upgr8 GmbH · Aschergasse 25/2 · 1130 Wien · +43 664 144 1492 · getyour@upgr8.org</address>
       </div>
     </div>
     <div class="f-copy">© 2026 Upgr8 GmbH</div>
   </div>
 </footer>
-
-<div class="mbar" id="mbar"><a class="btn" href="#erstgespraech" data-cta="mobile">Erstgespräch mit Armin buchen <span class="btn-ic"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div>
 
 <script>
 (function(){
@@ -789,171 +494,66 @@ section[id]{scroll-margin-top:72px}
   var $=function(s,c){return (c||document).querySelector(s)};
   var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var mobileMQ=window.matchMedia('(max-width:900px)');
+  var hasIO='IntersectionObserver' in window;
 
-  /* Navigation: transparent -> solid */
-  var nav=$('#nav'),burger=$('#burger'),hero=$('#top');
-  function navState(){nav.classList.toggle('solid',window.scrollY>40)}
+  /* Navigation */
+  var nav=$('#nav'),burger=$('#burger');
+  function navState(){nav.classList.toggle('solid',window.scrollY>80)}
   navState();window.addEventListener('scroll',navState,{passive:true});
-  function setMenu(open){
-    nav.classList.toggle('menu-open',open);
-    burger.setAttribute('aria-expanded',open);
-    burger.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');
-  }
+  function setMenu(o){nav.classList.toggle('menu-open',o);burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen')}
   burger.addEventListener('click',function(){setMenu(!nav.classList.contains('menu-open'))});
   $$('#mmenu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
-  mobileMQ.addEventListener&&mobileMQ.addEventListener('change',function(){setMenu(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
 
-  /* Dropdown */
-  var dd=$('#dd'),ddb=$('.dd-btn',dd);
-  function ddSet(o){dd.classList.toggle('open',o);ddb.setAttribute('aria-expanded',o)}
-  ddb.addEventListener('click',function(e){e.stopPropagation();ddSet(!dd.classList.contains('open'))});
-  document.addEventListener('click',function(e){if(!dd.contains(e.target))ddSet(false)});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'){ddSet(false);setMenu(false)}});
-  $$('.dd-menu a').forEach(function(a){a.addEventListener('click',function(){ddSet(false)})});
-
-  /* Mobile CTA bar: appears after the hero */
-  var mbar=$('#mbar');
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){mbar.classList.toggle('show',!es[0].isIntersecting)},{threshold:0.05}).observe(hero);
-  } else {mbar.classList.add('show')}
-
-  /* Scroll reveal with stagger */
-  $$('[data-stagger]').forEach(function(p){
-    var step=parseInt(p.getAttribute('data-stagger'),10)||80;
-    $$('.rv',p).forEach(function(el,i){el.style.setProperty('--d',(i*step)+'ms')});
-  });
-  var rvs=$$('.rv');
-  if('IntersectionObserver' in window&&!reduce){
-    var io=new IntersectionObserver(function(es){
-      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
-    },{threshold:0.15,rootMargin:'0px 0px -6% 0px'});
+  /* Scroll reveal (only when IntersectionObserver exists and motion is allowed) */
+  var rvs=$$('.rv'),nums=$$('.num');
+  if(hasIO&&!reduce){
+    document.documentElement.classList.add('anim');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.1});
     rvs.forEach(function(el){io.observe(el)});
-  } else {rvs.forEach(function(el){el.classList.add('in')})}
-
-  /* Counters */
-  var nums=$$('.num');
-  function runCount(el){
-    var to=parseInt(el.getAttribute('data-to'),10),t0=null,dur=1400;
-    function f(t){
-      if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);
-      el.textContent=Math.round(to*e);
-      if(p<1)requestAnimationFrame(f);
-    }
-    requestAnimationFrame(f);
-  }
-  if('IntersectionObserver' in window&&!reduce){
-    nums.forEach(function(n){n.textContent='0'});
-    var cio=new IntersectionObserver(function(es){
-      es.forEach(function(e){if(e.isIntersecting){runCount(e.target);cio.unobserve(e.target)}});
-    },{threshold:0.6});
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;cio.unobserve(e.target);
+      var el=e.target,to=+el.getAttribute('data-to'),t0=null;
+      (function f(t){if(!t0)t0=t;var p=Math.min((t-t0)/1200,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(performance.now());
+    })},{threshold:0.6});
     nums.forEach(function(n){cio.observe(n)});
   }
 
-  /* Hero scenes */
-  var scenes=$$('.scene'),marks=$$('.marks button'),bar=$('#bar'),si=0,stimer;
-  function showScene(i){
-    si=(i+scenes.length)%scenes.length;
-    scenes.forEach(function(s,k){s.classList.toggle('on',k===si)});
-    marks.forEach(function(m,k){m.setAttribute('aria-selected',k===si)});
-    bar.classList.remove('run');void bar.offsetWidth;
-    if(!reduce)bar.classList.add('run');
-  }
-  function sceneLoop(){clearInterval(stimer);if(!reduce)stimer=setInterval(function(){showScene(si+1)},5000)}
-  marks.forEach(function(m,k){m.addEventListener('click',function(){showScene(k);sceneLoop()})});
-  showScene(0);sceneLoop();
-
-  /* Logo marquee (mobile) */
-  var marq=$('#marq');
-  for(var k=0;k<2;k++)$$('#logo-row .lg').forEach(function(li){marq.appendChild(li.cloneNode(true))});
-  $$('img',marq).forEach(function(i){i.alt='';i.loading='eager'});
-
-  /* Parallax clouds */
-  var blind=$('.blind'),clouds=$$('.cloud'),ticking=false;
-  function par(){
-    ticking=false;
-    var r=blind.getBoundingClientRect(),vh=window.innerHeight;
-    if(r.bottom<-200||r.top>vh+200)return;
-    var d=r.top+r.height/2-vh/2;
-    clouds.forEach(function(c,i){
-      var s=parseFloat(c.getAttribute('data-speed'));
-      c.style.transform='translate3d('+(d*s*0.25*(i%2?-1:1))+'px,'+(-d*s)+'px,0)';
+  /* Accordion + image crossfade */
+  var items=$$('.acc-item'),media=$$('#solmedia img');
+  items.forEach(function(it,i){
+    $('.acc-h',it).addEventListener('click',function(){
+      items.forEach(function(o,k){o.classList.toggle('open',k===i);$('.acc-h',o).setAttribute('aria-expanded',k===i)});
+      media.forEach(function(m,k){m.classList.toggle('on',k===i)});
     });
-  }
-  if(!reduce){
-    window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(par)}},{passive:true});
-    window.addEventListener('resize',par);par();
-  }
-
-  /* Accordions */
-  function accordion(root,onOpen){
-    var items=$$('.acc-item',root);
-    function open(i,user){
-      items.forEach(function(it,k){
-        var o=k===i;it.classList.toggle('open',o);
-        $('.acc-h',it).setAttribute('aria-expanded',o);
-      });
-      if(onOpen)onOpen(i,user);
-    }
-    items.forEach(function(it,i){
-      $('.acc-h',it).addEventListener('click',function(){open(i,true)});
-    });
-    return {open:open,count:items.length};
-  }
-  var media=$$('#solmedia img'),solIdx=0,solAuto=true,solVisible=false,solTimer;
-  var acc1=accordion($('#acc1'),function(i,user){
-    solIdx=i;media.forEach(function(m,k){m.classList.toggle('on',k===i)});
-    if(user){solAuto=false;clearInterval(solTimer)}
   });
-  accordion($('#acc2'));
-  function solStart(){
-    clearInterval(solTimer);
-    if(reduce||!solAuto||!solVisible)return;
-    solTimer=setInterval(function(){acc1.open((solIdx+1)%acc1.count,false)},6000);
-  }
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){solVisible=es[0].isIntersecting;solStart()},{threshold:0.3}).observe($('#solmedia'));
-  }
 
-  /* Router slider */
-  var router=$('#router'),slides=$$('.slide',router),pg=$('#pg'),ri=0,rtimer,rVisible=false;
+  /* Slider */
+  var router=$('#router'),slides=$$('.slide',router),pg=$('#pg'),ri=0,timer,visible=false;
   function pad(n){return (n<10?'0':'')+n}
-  function goSlide(i){
+  function go(i){
     ri=(i+slides.length)%slides.length;
-    slides.forEach(function(s,k){
-      var on=k===ri;s.classList.toggle('on',on);
-      if(on)s.removeAttribute('inert');else s.setAttribute('inert','');
-    });
+    slides.forEach(function(s,k){s.classList.toggle('on',k===ri);if(k===ri)s.removeAttribute('inert');else s.setAttribute('inert','')});
     pg.textContent=pad(ri+1)+' / '+pad(slides.length);
   }
-  function rLoop(){
-    clearInterval(rtimer);
-    if(reduce||!rVisible)return;
-    rtimer=setInterval(function(){goSlide(ri+1)},7000);
-  }
-  $('.prev',router).addEventListener('click',function(){goSlide(ri-1);rLoop()});
-  $('.next',router).addEventListener('click',function(){goSlide(ri+1);rLoop()});
+  function loop(){clearInterval(timer);if(reduce||!visible)return;timer=setInterval(function(){go(ri+1)},7000)}
+  $('.prev',router).addEventListener('click',function(){go(ri-1);loop()});
+  $('.next',router).addEventListener('click',function(){go(ri+1);loop()});
   var tx=null,ty=null;
   router.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
   router.addEventListener('touchend',function(e){
     if(tx===null)return;
     var dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;
-    if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)){goSlide(ri+(dx<0?1:-1));rLoop()}
+    if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)){go(ri+(dx<0?1:-1));loop()}
     tx=null;
   },{passive:true});
-  router.addEventListener('keydown',function(e){
-    if(e.key==='ArrowLeft'){goSlide(ri-1);rLoop()}
-    if(e.key==='ArrowRight'){goSlide(ri+1);rLoop()}
-  });
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){rVisible=es[0].isIntersecting;rLoop()},{threshold:0.4}).observe(router);
-  }
+  if(hasIO)new IntersectionObserver(function(es){visible=es[0].isIntersecting;loop()},{threshold:0.4}).observe(router);
 
-  /* Newsletter (Platzhalter, keine Anbindung) */
+  /* Newsletter placeholder */
   $('#news').addEventListener('submit',function(e){
     e.preventDefault();
-    var m=$('#news-msg'),v=$('#mail');
-    m.textContent=v.checkValidity()&&v.value?'[Newsletter-Anbindung ausstehend]':'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+    var v=$('#mail');
+    $('#news-msg').textContent=(v.value&&v.checkValidity())?'[Newsletter-Anbindung ausstehend]':'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
   });
 })();
 </script>
