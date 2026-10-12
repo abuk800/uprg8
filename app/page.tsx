@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/hero";
+import { Clients } from "@/components/sections/clients";
 import { Recognition } from "@/components/sections/recognition";
 import { SearchEnd } from "@/components/sections/search-end";
 import { BlindSpot } from "@/components/sections/blind-spot";
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <main>
         <Hero />
+        <Clients />
         <Recognition />
         <SearchEnd />
         <BlindSpot />
