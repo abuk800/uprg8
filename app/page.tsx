@@ -1,12 +1,11 @@
 import { Hero } from "@/components/sections/hero";
-import { Clients } from "@/components/sections/clients";
 import { Recognition } from "@/components/sections/recognition";
-import { SearchEnd } from "@/components/sections/search-end";
 import { BlindSpot } from "@/components/sections/blind-spot";
 import { Method } from "@/components/sections/method";
-import { Situation } from "@/components/sections/situation";
-import { Audiences } from "@/components/sections/audiences";
+import { BeforeAfter } from "@/components/sections/before-after";
+import { Proof } from "@/components/sections/proof";
 import { Team } from "@/components/sections/team";
+import { SearchEnd } from "@/components/sections/search-end";
 import { Risk } from "@/components/sections/risk";
 import { Closing } from "@/components/sections/closing";
 import { Footer } from "@/components/sections/footer";
@@ -17,14 +16,13 @@ export default function Home() {
     <>
       <main>
         <Hero />
-        <Clients />
         <Recognition />
-        <SearchEnd />
         <BlindSpot />
         <Method />
-        <Situation />
-        <Audiences />
+        <BeforeAfter />
+        <Proof />
         <Team />
+        <SearchEnd />
         <Risk />
         <Closing />
       </main>

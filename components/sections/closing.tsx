@@ -15,7 +15,7 @@ export function Closing() {
         <p className="max-w-[520px] text-[17px] text-white/80">
           Armin Blassnig hört zu, stellt die richtigen Fragen und sagt Ihnen ehrlich, ob und wie upgr8 helfen kann.
         </p>
-        <CtaButton href="[Kalender-Link]" variant="light" data-cta="kontakt">
+        <CtaButton href="tel:+436641441492" variant="light" data-cta="kontakt">
           Termin mit Armin wählen
         </CtaButton>
         <p className="text-[14px] text-white/70">
@@ -26,7 +26,7 @@ export function Closing() {
         </p>
       </Reveal>
       <Reveal delay={100} className="w-full max-w-[400px] md:justify-self-end">
-        <TeamCard name={armin.name} role={armin.role} color={armin.color} href="[Kalender-Link]" onDark />
+        <TeamCard name={armin.name} role={armin.role} color={armin.color} href="tel:+436641441492" onDark />
       </Reveal>
     </Section>
   );

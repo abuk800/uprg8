@@ -12,17 +12,19 @@ const STEPS = [
 
 const FAQ = [
   { q: "Wir sind kein Konzern. Passt das?", a: "Genau dafür sind wir da. In Unternehmen mit 100 bis 1.000 Mitarbeitenden wirkt unser Ansatz besonders schnell, weil die Wege kurz sind." },
+  { q: "Wecken wir damit nicht Erwartungen, die wir nicht erfüllen können?", a: "Nein. Wir klären von Anfang an, worüber mitgedacht wird und was gesetzt ist. Ihre Leute geben Input, Sie entscheiden. Das schafft Vertrauen statt Enttäuschung." },
   { q: "Wie viel Zeit kostet das mein Team?", a: "Wir planen den Aufwand so, dass er neben dem Tagesgeschäft funktioniert. [Richtwert]" },
   { q: "Wer entscheidet am Ende?", a: "Sie. Ihre Leute denken mit, die Entscheidung bleibt bei Ihnen." },
   { q: "Was, wenn mein Team nicht mitzieht?", a: "Genau deshalb binden wir es von Anfang an ein. Wer mitgedacht hat, zieht mit." },
-  { q: "Was kostet das?", a: "Das hängt vom Umfang ab. Im Erstgespräch nennen wir Ihnen einen klaren Rahmen, bevor Sie sich entscheiden." },
+  // Preislogik mit dem Kunden bestätigen
+  { q: "Was kostet das?", a: "Sie erhalten vor dem Start einen klaren Rahmen für Umfang, Dauer und Investition. Keine offenen Beratertage." },
 ];
 
 export function Risk() {
   return (
     <Section id="faq" aria-labelledby="risk-h" innerClassName="grid gap-14 md:grid-cols-2 md:gap-16">
       <Reveal>
-        <Eyebrow>Erstgespräch</Eyebrow>
+        <Eyebrow>Ihr erster Schritt</Eyebrow>
         <H2 id="risk-h" className="mt-5">
           So läuft das Erstgespräch
         </H2>

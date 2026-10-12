@@ -31,6 +31,8 @@ type Props = {
   intro?: string;
   items: FeatureItem[];
   columns?: 3 | 4;
+  /** Abschnittskopf: zentriert oder linksbündig */
+  align?: "center" | "left";
   className?: string;
 };
 
@@ -89,11 +91,11 @@ function FeatureCard({ item }: { item: FeatureItem }) {
   return body;
 }
 
-export function FeatureGrid({ eyebrow, title, intro, items, columns = 3, className }: Props) {
+export function FeatureGrid({ eyebrow, title, intro, items, columns = 3, align = "center", className }: Props) {
   return (
     <div className={className}>
       {(eyebrow || title || intro) && (
-        <Reveal className="mx-auto mb-12 flex max-w-2xl flex-col items-center gap-4 text-center md:mb-16">
+        <Reveal className={cn("mb-12 flex max-w-2xl flex-col gap-4 md:mb-16", align === "center" ? "mx-auto items-center text-center" : "items-start text-left")}>
           {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
           {title && <H2>{title}</H2>}
           {intro && <p className="text-[17px] text-muted-foreground">{intro}</p>}

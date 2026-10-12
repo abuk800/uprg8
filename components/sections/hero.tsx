@@ -3,7 +3,6 @@ import { ArrowUpRight, Sparkle } from "lucide-react"
 import { MobileMenu } from "@/components/sections/mobile-menu"
 
 /*
- * Vorherige Headline: „Strategie, die nicht in der Schublade landet.“
  * Headline-Varianten für einen späteren Test:
  * B: „Ihr Team kennt die Antworten. Wir machen daraus Ihre Strategie.“
  * C: „Ihre Strategie ist gut. Sie kommt nur nicht im Alltag an.“
@@ -12,10 +11,10 @@ import { MobileMenu } from "@/components/sections/mobile-menu"
 const IMG = "https://upgr8.org/wp-content/uploads/"
 
 const facts = [
-  { label: "Ehemals Vice President", value: "Apple & Nokia" },
-  { label: "Ehemals Partner", value: "Roland Berger" },
-  { label: "Führungserfahrung", value: "20+ Jahre Finanzsektor" },
-  { label: "Projekte u. a. mit", value: "Raiffeisen · Agrana · Mercedes" },
+  { label: "Partner statt Junior-Berater", value: "5 Partner mit eigener Führungsverantwortung" },
+  { label: "Konzernerfahrung", value: "Apple · Nokia · Roland Berger" },
+  { label: "Branchenerfahrung", value: "20+ Jahre Finanzsektor" },
+  { label: "Projekte u. a. mit", value: "Raps · Blue Tomato · Raiffeisen" },
 ]
 
 export function Hero() {
@@ -46,22 +45,21 @@ export function Hero() {
             <Sparkle className="size-3 fill-current" aria-hidden />
             Strategieberatung für den Mittelstand
           </p>
-          <h1 className="mt-7 text-balance text-[42px] font-medium leading-[1.04] tracking-[-0.045em] md:text-[72px]">
-            Gute Strategie. Und trotzdem bleibt die Umsetzung liegen?
+          <h1 className="mt-7 text-[42px] font-medium leading-[1.04] tracking-[-0.045em] md:text-[72px]">
+            Strategie, die nicht<br />in der Schublade landet.
           </h1>
-          <p className="mx-auto mt-6 max-w-[680px] text-[17px] leading-relaxed text-[#5C5B5A] md:text-[19px]">
-            Wenn Entscheidungen ohne die Menschen entstehen, die sie später umsetzen müssen, fehlt oft die Verbindung zum Unternehmensalltag. Genau dort setzen wir an.
+          <p className="mx-auto mt-6 max-w-[560px] text-[17px] leading-relaxed text-[#5C5B5A] md:text-[19px]">
+            Wir entwickeln sie mit den Menschen, die sie umsetzen müssen. Für Mittelständler mit 100 bis 1.000 Mitarbeitenden.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4">
             <a href="#kontakt" data-cta="hero"
               className="group inline-flex items-center gap-3 rounded-full bg-[#191818] py-2 pl-7 pr-2 text-[16px] font-medium text-white">
-              <span className="sm:hidden">Erstgespräch buchen</span>
-              <span className="hidden sm:inline">Erstgespräch mit Armin Blassnig buchen</span>
+              Erstgespräch buchen
               <span className="grid size-10 place-items-center rounded-full bg-[#FF6978] text-black transition-transform duration-300 group-hover:rotate-45">
                 <ArrowUpRight className="size-4" aria-hidden />
               </span>
             </a>
-            <p className="text-[14px] text-[#5C5B5A]">30 Minuten · unverbindlich · kein Pitch</p>
+            <p className="text-[14px] text-[#5C5B5A]">30 Minuten mit Armin Blassnig, Geschäftsführer · unverbindlich</p>
           </div>
         </div>
 
@@ -74,6 +72,11 @@ export function Hero() {
             className="aspect-[2.2/1] w-full object-cover object-[50%_20%] md:aspect-[2.8/1]"
           />
         </div>
+
+        <p className="mt-3 text-[13px] text-[#5C5B5A]">
+          v. l. n. r.: Maximilian Kammerer · Armin Blassnig · Daniel Deuring · David Rohrmann · David Kreiner
+          {/* Reihenfolge vom Kunden bestätigen lassen */}
+        </p>
 
         <dl className="mt-10 grid grid-cols-2 gap-y-8 text-center md:grid-cols-4 md:divide-x md:divide-[#E7E7EA] md:text-left">
           {facts.map((f, i) => (

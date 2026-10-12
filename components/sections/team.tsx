@@ -1,14 +1,13 @@
 import Image from "next/image";
 import { Section } from "@/components/ui/section";
 import { Eyebrow, H2 } from "@/components/ui/typography";
-import { TeamCard } from "@/components/ui/team-card";
 import { Reveal } from "@/components/ui/reveal";
-import { IMG, PARTNERS } from "@/lib/images";
+import { PARTNERS } from "@/lib/images";
 
 export function Team() {
   return (
-    <Section id="team" aria-labelledby="team-h" className="bg-section">
-      <Reveal className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
+    <Section id="team" aria-labelledby="team-h">
+      <Reveal className="flex max-w-2xl flex-col items-start gap-4">
         <Eyebrow>Team</Eyebrow>
         <H2 id="team-h">Unternehmer beraten Unternehmer.</H2>
         <p className="text-[17px] text-muted-foreground">
@@ -17,25 +16,28 @@ export function Team() {
       </Reveal>
 
       <div className="-mx-6 mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 [scroll-padding-inline:1.5rem] md:mx-0 md:mt-16 md:grid md:grid-cols-3 md:overflow-visible md:px-0 lg:grid-cols-5">
-        {PARTNERS.map((p) => (
-          <TeamCard key={p.slug} {...p} className="w-[76%] shrink-0 snap-start md:w-auto" />
+        {PARTNERS.map((p, i) => (
+          <Reveal key={p.slug} delay={i * 80} className="w-[76%] shrink-0 snap-start md:w-auto">
+            <article>
+              <div className="relative aspect-square overflow-hidden rounded-2xl bg-portrait">
+                <Image
+                  src={p.color}
+                  alt={`${p.name}, ${p.role}`}
+                  fill
+                  sizes="(min-width: 1024px) 20vw, (min-width: 768px) 33vw, 76vw"
+                  className="object-cover object-[center_15%]"
+                />
+              </div>
+              <h3 className="mt-4 text-[18px] font-normal leading-snug">{p.name}</h3>
+              {/* Station pro Partner vom Kunden einholen */}
+              <p className="text-[14px] text-muted-foreground">{p.role}</p>
+              {p.slug === "armin" && (
+                <span className="mt-2 inline-flex rounded-full bg-accent px-3 py-1 text-[12px] font-medium text-foreground">Führt Ihr Erstgespräch</span>
+              )}
+            </article>
+          </Reveal>
         ))}
       </div>
-
-      <Reveal className="mt-20 grid items-center gap-8 md:grid-cols-2 md:gap-14">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-portrait">
-          <Image src={IMG.ariane} alt="Dr. Ariane Pfleger, Executive Director der Raiffeisen Landesbank Steiermark" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
-        </div>
-        <figure>
-          <blockquote className="text-[28px] font-normal leading-snug tracking-[-0.02em]">
-            „Die Zusammenarbeit mit dem upgr8-Team ist sowohl äußerst produktiv als auch wirklich angenehm.“
-          </blockquote>
-          <figcaption className="mt-6 text-[15px]">
-            <strong className="font-medium">Dr. Ariane Pfleger</strong>
-            <span className="block text-muted-foreground">Executive Director, Raiffeisen Landesbank Steiermark</span>
-          </figcaption>
-        </figure>
-      </Reveal>
     </Section>
   );
 }

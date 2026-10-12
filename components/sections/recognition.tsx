@@ -1,52 +1,68 @@
-import { CalendarX, Inbox, Waves } from "lucide-react";
 import { Section } from "@/components/ui/section";
-import { FeatureGrid } from "@/components/ui/feature-grid";
+import { Eyebrow, H2 } from "@/components/ui/typography";
 import { CountUp } from "@/components/ui/count-up";
 import { Reveal } from "@/components/ui/reveal";
 
-const STATS = [
-  { to: 77, text: "der Familienunternehmen sagen: Strategische Projekte werden vom Tagesgeschäft verdrängt." },
-  { to: 11, text: "sagen: Unsere Mitarbeitenden verstehen die Strategie wirklich." },
-  { to: 10, text: "der Beschäftigten fühlen sich ihrem Arbeitgeber emotional stark verbunden." },
+const THOUGHTS = [
+  {
+    label: "Wachstum",
+    quote: "„Wir haben ein Führungsteam. Trotzdem landet alles bei mir.“",
+    line: "Das Unternehmen wächst nur so schnell wie Ihr Kalender.",
+  },
+  {
+    label: "Nach der Klausur",
+    quote: "„Alle waren sich einig. Drei Monate später fragt keiner mehr danach.“",
+    line: "Und die nächste Klausur glaubt schon keiner mehr.",
+  },
+  {
+    label: "Wandel",
+    quote: "„KI, Fachkräfte, neue Märkte. Meine Leute nicken und machen weiter wie bisher.“",
+    line: "Der Markt dreht sich schneller als die Organisation.",
+  },
 ];
 
+/** Der Spiegel: rein typografisch, keine Karten. */
 export function Recognition() {
   return (
-    <Section id="situation-alltag" aria-labelledby="erkennen-h">
-      <FeatureGrid
-        eyebrow="Der Alltag im Mittelstand"
-        title={<span id="erkennen-h">Kommt Ihnen das bekannt vor?</span>}
-        items={[
-          { icon: CalendarX, title: "Die Klausur war gut.", text: "Alle waren sich einig. Drei Monate später fragt keiner mehr danach." },
-          { icon: Inbox, title: "Alles landet bei Ihnen.", text: "Sie haben ein Führungsteam. Trotzdem wartet bei jeder wichtigen Frage alles auf Ihre Entscheidung." },
-          { icon: Waves, title: "Der Wandel kommt nicht an.", text: "KI, Fachkräftemangel, neue Märkte. Ihre Leute nicken und machen weiter wie bisher." },
-        ]}
-      />
+    <Section id="situation" aria-labelledby="spiegel-h">
+      <Reveal className="max-w-3xl">
+        <Eyebrow>Der Alltag im Mittelstand</Eyebrow>
+        <H2 id="spiegel-h" className="mt-5">
+          Kommt Ihnen einer dieser Gedanken bekannt vor?
+        </H2>
+      </Reveal>
 
-      <div className="mt-20 md:mt-28">
-        <Reveal>
-          <p className="mb-8 text-[14px] text-muted-foreground">Sie sind nicht allein</p>
-        </Reveal>
-        <div className="grid gap-10 md:grid-cols-3 md:gap-8">
-          {STATS.map((s, i) => (
-            <Reveal key={s.to} delay={i * 80} className="border-t border-foreground pt-6">
-              <div className="text-[56px] font-medium leading-none tracking-[-0.04em]">
-                <CountUp to={s.to} suffix=" %" />
-              </div>
-              <p className="mt-4 text-[15px] text-muted-foreground">{s.text}</p>
-            </Reveal>
-          ))}
-        </div>
-        <p className="mt-8 text-[12px] text-muted-foreground">
-          Dr. Wieselhuber &amp; Partner, Studie mit 116 Familienunternehmen (2026) · Gallup Engagement Index Deutschland 2025
-        </p>
+      <div className="mt-12 md:mt-16">
+        {THOUGHTS.map((t, i) => (
+          <Reveal key={t.label} delay={i * 80} className="grid gap-4 border-t border-foreground py-8 md:grid-cols-12 md:gap-8 md:py-12">
+            <p className="text-[14px] text-muted-foreground md:col-span-3">{t.label}</p>
+            <div className="md:col-span-9">
+              <p className="text-[26px] font-medium leading-[1.15] tracking-[-0.03em] md:text-[36px]">{t.quote}</p>
+              <p className="mt-4 text-[16px] text-muted-foreground">{t.line}</p>
+            </div>
+          </Reveal>
+        ))}
       </div>
 
-      <Reveal className="mx-auto mt-16 max-w-3xl text-center md:mt-24">
-        <p className="text-[24px] font-medium leading-snug tracking-[-0.02em]">
-          Jedes Quartal, in dem Ihre Strategie wartet, entscheidet der Wettbewerb für Sie.
-        </p>
-      </Reveal>
+      <div className="mt-16 grid gap-10 border-t border-foreground pt-8 md:grid-cols-3 md:gap-8">
+        <Reveal>
+          <div className="text-[56px] font-medium leading-none tracking-[-0.04em]">
+            <CountUp to={77} suffix=" %" />
+          </div>
+          <p className="mt-4 text-[15px] text-muted-foreground">der Familienunternehmen sagen: Strategische Projekte werden vom Tagesgeschäft verdrängt.</p>
+        </Reveal>
+        <Reveal delay={80}>
+          <div className="text-[56px] font-medium leading-none tracking-[-0.04em]">
+            <CountUp to={11} suffix=" %" />
+          </div>
+          <p className="mt-4 text-[15px] text-muted-foreground">sagen: Unsere Mitarbeitenden verstehen die Strategie wirklich.</p>
+        </Reveal>
+        <Reveal delay={160}>
+          <div className="text-[56px] font-medium leading-none tracking-[-0.04em]">Jedes Quartal</div>
+          <p className="mt-4 text-[15px] text-muted-foreground">in dem Ihre Strategie wartet, entscheidet der Wettbewerb für Sie.</p>
+        </Reveal>
+      </div>
+      <p className="mt-8 text-[12px] text-muted-foreground">Dr. Wieselhuber &amp; Partner, Studie mit 116 Familienunternehmen (2026)</p>
     </Section>
   );
 }

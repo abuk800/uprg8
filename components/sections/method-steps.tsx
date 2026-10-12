@@ -15,8 +15,8 @@ const STEP_MS = 900;
 
 /**
  * Die vier Schritte laufen nacheinander an, sobald sie sichtbar sind:
- * Nummer wird schwarz, ein Coral-Punkt setzt den Anker, die Linie zum nächsten Schritt füllt sich.
- * Ohne JavaScript bleiben alle Inhalte sichtbar (graue Nummern, feine Linien).
+ * Ein Coral-Punkt setzt den Anker, die Linie zum nächsten Schritt füllt sich.
+ * Alle vier Schritte sehen im Ausgangszustand gleich aus; ohne JavaScript bleibt alles sichtbar.
  */
 export function MethodSteps() {
   const ref = React.useRef<HTMLOListElement>(null);
@@ -51,16 +51,10 @@ export function MethodSteps() {
     <ol ref={ref} className="mt-14 grid gap-10 md:mt-20 md:grid-cols-4 md:gap-8">
       {STEPS.map((s, i) => {
         const on = reached > i;
-        const last = i === STEPS.length - 1;
         return (
           <li key={s.n}>
             <div className="flex items-center gap-4">
-              <span
-                className={cn(
-                  "relative text-[48px] font-medium leading-none tracking-[-0.04em] tabular-nums transition-colors duration-500",
-                  on ? "text-foreground" : "text-[#D9D9D9]",
-                )}
-              >
+              <span className="relative text-[48px] font-medium leading-none tracking-[-0.04em] tabular-nums text-foreground">
                 {s.n}
                 <span
                   aria-hidden
@@ -70,16 +64,14 @@ export function MethodSteps() {
                   )}
                 />
               </span>
-              {!last && (
-                <span aria-hidden className="relative ml-2 hidden h-px flex-1 overflow-hidden bg-border md:block">
-                  <span
-                    className={cn(
-                      "absolute inset-0 origin-left bg-foreground transition-transform ease-out",
-                      on ? "scale-x-100 duration-[900ms]" : "scale-x-0 duration-0",
-                    )}
-                  />
-                </span>
-              )}
+              <span aria-hidden className="relative ml-2 hidden h-px flex-1 overflow-hidden bg-border md:block">
+                <span
+                  className={cn(
+                    "absolute inset-0 origin-left bg-foreground transition-transform ease-out",
+                    on ? "scale-x-100 duration-[900ms]" : "scale-x-0 duration-0",
+                  )}
+                />
+              </span>
             </div>
             <div aria-hidden className="relative mt-4 h-px overflow-hidden bg-border md:hidden">
               <span
@@ -89,7 +81,7 @@ export function MethodSteps() {
                 )}
               />
             </div>
-            <H3 className={cn("mt-4 transition-opacity duration-500", on ? "opacity-100" : "opacity-60")}>{s.title}</H3>
+            <H3 className="mt-4">{s.title}</H3>
             <p className="mt-2 text-[15px] text-muted-foreground">{s.text}</p>
           </li>
         );
