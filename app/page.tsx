@@ -1,6 +1,4 @@
-import { Nav } from "@/components/sections/nav";
 import { Hero } from "@/components/sections/hero";
-import { Clients } from "@/components/sections/clients";
 import { Recognition } from "@/components/sections/recognition";
 import { SearchEnd } from "@/components/sections/search-end";
 import { BlindSpot } from "@/components/sections/blind-spot";
@@ -15,10 +13,8 @@ import { MobileBar } from "@/components/sections/mobile-bar";
 export default function Home() {
   return (
     <>
-      <Nav />
       <main>
         <Hero />
-        <Clients />
         <Recognition />
         <SearchEnd />
         <BlindSpot />

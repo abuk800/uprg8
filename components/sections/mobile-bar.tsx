@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 export function MobileBar() {
   const [show, setShow] = React.useState(false);
   React.useEffect(() => {
-    const hero = document.getElementById("hero");
+    const hero = document.querySelector("section");
     if (!hero || !("IntersectionObserver" in window)) return;
     const io = new IntersectionObserver(([e]) => setShow(!e.isIntersecting), { threshold: 0.05 });
     io.observe(hero);
