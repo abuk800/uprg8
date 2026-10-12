@@ -17,6 +17,7 @@
   --animate-sheet-out: sheet-out 0.2s ease-in;
   --animate-fade-in: fade-in 0.2s ease-out;
   --animate-fade-out: fade-out 0.2s ease-in;
+  --animate-hero-zoom: hero-zoom 1.2s ease-out both;
 }
 
 :root {
@@ -50,6 +51,7 @@
 @keyframes marquee { to { transform: translateX(calc(-50% - 1.5rem)); } }
 @keyframes sheet-in { from { transform: translateX(100%) } to { transform: translateX(0) } }
 @keyframes sheet-out { from { transform: translateX(0) } to { transform: translateX(100%) } }
+@keyframes hero-zoom { from { transform: scale(1.04) } to { transform: scale(1) } }
 @keyframes fade-in { from { opacity: 0 } to { opacity: 1 } }
 @keyframes fade-out { from { opacity: 1 } to { opacity: 0 } }
 

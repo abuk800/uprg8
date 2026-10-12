@@ -28,13 +28,13 @@ export function Nav() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-100 transition-colors duration-300",
-        solid ? "border-b border-border bg-white text-foreground" : "bg-linear-to-b from-black/40 to-transparent text-white",
+        "text-foreground", solid ? "border-b border-border bg-white" : "border-b border-transparent bg-section",
       )}
     >
       <Container className="grid h-[72px] grid-cols-[1fr_auto] items-center md:grid-cols-[1fr_auto_1fr]">
         <a href="#hero" aria-label="upgr8 – zur Startseite" className="inline-flex">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={IMG.logo} alt="upgr8 Logo" width={110} height={30} className={cn("h-[30px] w-auto", !solid && "invert")} />
+          <img src={IMG.logo} alt="upgr8 Logo" width={110} height={30} className="h-[30px] w-auto" />
         </a>
         <nav aria-label="Hauptnavigation" className="hidden gap-9 text-[15px] font-medium md:flex">
           {LINKS.map((l) => (
@@ -44,7 +44,7 @@ export function Nav() {
           ))}
         </nav>
         <div className="flex items-center justify-end">
-          <CtaButton href="#kontakt" data-cta="nav" size="sm" variant={solid ? "dark" : "light"} className="hidden md:inline-flex">
+          <CtaButton href="#kontakt" data-cta="nav" size="sm" className="hidden md:inline-flex">
             Erstgespräch buchen
           </CtaButton>
           <Sheet>
