@@ -5,6 +5,7 @@ import { SearchEnd } from "@/components/sections/search-end";
 import { BlindSpot } from "@/components/sections/blind-spot";
 import { Method } from "@/components/sections/method";
 import { Situation } from "@/components/sections/situation";
+import { Audiences } from "@/components/sections/audiences";
 import { Team } from "@/components/sections/team";
 import { Risk } from "@/components/sections/risk";
 import { Closing } from "@/components/sections/closing";
@@ -22,6 +23,7 @@ export default function Home() {
         <BlindSpot />
         <Method />
         <Situation />
+        <Audiences />
         <Team />
         <Risk />
         <Closing />

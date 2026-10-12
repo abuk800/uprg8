@@ -15,6 +15,10 @@ export type FeatureItem = {
   highlight?: boolean;
   /** Ganze Karte klickbar */
   href?: string;
+  /** Beschriftung des Links (Standard: „Mehr erfahren“) */
+  ctaLabel?: string;
+  /** Link-Beschriftung dauerhaft zeigen statt nur beim Hover */
+  ctaVisible?: boolean;
   /** Zusätzliche Attribute, z. B. data-situation */
   linkProps?: Record<string, string>;
   /** Optionaler Textlink unter dem Text */
@@ -52,19 +56,24 @@ const CardDecorator = ({ children, dark }: { children: React.ReactNode; dark?: b
 function FeatureCard({ item }: { item: FeatureItem }) {
   const Icon = item.icon;
   const body = (
-    <Card className={cn("group h-full border-0 shadow-none", item.highlight ? "bg-foreground text-white" : "bg-muted")}>
+    <Card className={cn("group flex h-full flex-col border-0 shadow-none", item.highlight ? "bg-foreground text-white" : "bg-muted")}>
       <CardHeader className="pb-3">
         <CardDecorator dark={item.highlight}>
           <Icon className="size-6" aria-hidden strokeWidth={1} />
         </CardDecorator>
         <H3 className="mt-6 text-center">{item.title}</H3>
       </CardHeader>
-      <CardContent className="text-center">
+      <CardContent className="flex flex-1 flex-col text-center">
         <p className={cn("text-[15px]", item.highlight ? "text-white/80" : "text-muted-foreground")}>{item.text}</p>
         {item.footer}
         {item.href && (
-          <span className="mt-4 inline-flex items-center gap-1 text-[14px] font-medium opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
-            Mehr erfahren <ArrowUpRight className="size-4" aria-hidden />
+          <span
+            className={cn(
+              "mt-auto inline-flex items-center gap-1 self-center pt-4 text-[14px] font-medium transition-opacity",
+              item.ctaVisible ? "underline underline-offset-4" : "opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100",
+            )}
+          >
+            {item.ctaLabel ?? "Mehr erfahren"} <ArrowUpRight className="size-4" aria-hidden />
           </span>
         )}
       </CardContent>
@@ -72,7 +81,7 @@ function FeatureCard({ item }: { item: FeatureItem }) {
   );
   if (item.href) {
     return (
-      <Link href={item.href} className="block rounded-lg" {...item.linkProps}>
+      <Link href={item.href} className="block h-full rounded-lg" {...item.linkProps}>
         {body}
       </Link>
     );
