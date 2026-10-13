@@ -4,32 +4,31 @@ import { Eyebrow, H2 } from "@/components/ui/typography";
 import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 
-// Entwurf: Gegenüberstellung aus den Aussagen der Seite abgeleitet, vom Kunden bestätigen lassen
 const ROWS = [
   {
-    topic: "Wer berät",
-    classic: "Junior-Berater erarbeiten die Folien, die Partner sieht man vor allem zu Beginn.",
-    upgr8: "Partner am Tisch, die selbst Verantwortung für Strategie und Ergebnisse getragen haben.",
+    topic: "Wer am Tisch sitzt",
+    classic: "Die Partner zum Auftakt, danach das Junior-Team.",
+    upgr8: "Die Partner, vom ersten Workshop bis zum Ergebnis.",
   },
   {
-    topic: "Das Wissen",
-    classic: "Das Konzept entsteht ohne Ihr Team.",
-    upgr8: "Wir holen das Wissen aus allen Ebenen, nicht nur aus der Geschäftsführung.",
+    topic: "Woher die Antworten kommen",
+    classic: "Aus Analysen, Benchmarks und Interviews mit der Führungsetage.",
+    upgr8: "Aus Ihrer Organisation: Vertrieb, Teamleitungen, Fachkräfte.",
   },
   {
-    topic: "Die Strategie",
-    classic: "Strategie entsteht oben und versandet unten.",
-    upgr8: "Eine Roadmap mit klaren Zuständigkeiten, getragen von denen, die sie mitentwickelt haben.",
+    topic: "Was am Ende auf dem Tisch liegt",
+    classic: "Ein Konzept, das erst noch erklärt werden muss.",
+    upgr8: "Wenige Prioritäten, die Ihre Leute schon kennen, weil sie mitgedacht haben.",
   },
   {
-    topic: "Ihre Leute",
-    classic: "Sie bekommen das Ergebnis erklärt und sollen es umsetzen.",
-    upgr8: "Ihre Leute denken mit. Die Entscheidung bleibt bei Ihnen.",
+    topic: "KI",
+    classic: "Ein Tool-Projekt für einzelne Prozesse.",
+    upgr8: "Ein Führungsthema für das ganze Unternehmen.",
   },
   {
-    topic: "Danach",
-    classic: "Nach der Abschlusspräsentation sind die Berater weg.",
-    upgr8: "Wir bleiben, bis die Ergebnisse im Alltag sichtbar sind.",
+    topic: "Woran man sich misst",
+    classic: "An der Abschlusspräsentation.",
+    upgr8: "An dem, was im Alltag umgesetzt ist.",
   },
 ];
 
@@ -46,7 +45,7 @@ export function SearchEnd() {
 
       <Reveal className="mt-12 md:mt-16">
         {/* Spaltenköpfe, nur Desktop */}
-        <div aria-hidden className="hidden md:grid md:grid-cols-[1fr_2fr_2fr] md:gap-x-0">
+        <div aria-hidden className="hidden md:grid md:grid-cols-[1.2fr_2fr_2fr] md:gap-x-0">
           <div />
           <p className="px-8 pb-4 text-[15px] text-muted-foreground">Klassische Beratung</p>
           <p className="rounded-t-2xl bg-[#191818] px-8 pb-4 pt-5 text-[15px] font-medium text-accent">upgr8</p>
@@ -56,7 +55,7 @@ export function SearchEnd() {
           {ROWS.map((r, i) => {
             const last = i === ROWS.length - 1;
             return (
-              <li key={r.topic} className="grid gap-3 max-md:[&:not(:first-child)]:border-t max-md:[&:not(:first-child)]:pt-6 md:grid-cols-[1fr_2fr_2fr] md:gap-0">
+              <li key={r.topic} className="grid gap-3 max-md:[&:not(:first-child)]:border-t max-md:[&:not(:first-child)]:pt-6 md:grid-cols-[1.2fr_2fr_2fr] md:gap-0">
                 <p className="text-[14px] text-muted-foreground md:border-t md:border-border md:py-8 md:text-[15px]">{r.topic}</p>
 
                 <div className="md:border-t md:border-border md:px-8 md:py-8">
