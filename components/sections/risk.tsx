@@ -3,6 +3,7 @@ import { Section } from "@/components/ui/section";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Eyebrow, H2 } from "@/components/ui/typography";
 import { Reveal } from "@/components/ui/reveal";
+import ScrollTimeline from "@/components/ui/scroll-timeline";
 
 const STEPS = [
   "Sie schildern Ihre Situation, 30 Minuten, per Video oder Telefon.",
@@ -31,16 +32,10 @@ export function Risk() {
           </H2>
         </Reveal>
 
-        <ol className="mt-12 grid gap-10 md:mt-16 md:grid-cols-3 md:gap-8">
-          {STEPS.map((t, i) => (
-            <li key={t}>
-              <Reveal delay={i * 100} className="border-t border-foreground pt-6">
-                <p className="text-[14px] tabular-nums text-muted-foreground">0{i + 1}</p>
-                <p className="mt-6 text-[22px] font-medium leading-snug tracking-[-0.02em] md:text-[24px]">{t}</p>
-              </Reveal>
-            </li>
-          ))}
-        </ol>
+        <ScrollTimeline
+          className="mt-12 md:mt-16"
+          steps={STEPS.map((text, i) => ({ id: `step-${i}`, label: `0${i + 1}`, text }))}
+        />
 
         <Reveal className="mt-12">
           <p className="inline-flex items-center gap-3 rounded-full bg-muted px-5 py-3 text-[15px] font-medium">
