@@ -10,6 +10,7 @@ export function SearchEnd() {
         title="Warum nicht einfach eine Klausur?"
         intro="Wenn bisherige Versuche verpufft sind, liegt das nicht an Ihnen. Alle haben denselben blinden Fleck."
         align="left"
+        hoverInvert
         items={[
           { icon: Building2, title: "Große Strategieberatung", text: "Das Konzept entsteht ohne Ihr Team. Danach sind die Berater weg." },
           { icon: Users, title: "Klausur mit Moderator", text: "Nur die Spitze war dabei. Ab Montag gewinnt das Tagesgeschäft." },

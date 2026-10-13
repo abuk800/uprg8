@@ -1,7 +1,7 @@
 import { ShieldCheck } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Eyebrow, H2, H3 } from "@/components/ui/typography";
+import { Eyebrow, H2 } from "@/components/ui/typography";
 import { Reveal } from "@/components/ui/reveal";
 
 const STEPS = [
@@ -22,37 +22,49 @@ const FAQ = [
 
 export function Risk() {
   return (
-    <Section id="faq" aria-labelledby="risk-h" innerClassName="grid gap-14 md:grid-cols-2 md:gap-16">
-      <Reveal>
-        <Eyebrow>Ihr erster Schritt</Eyebrow>
-        <H2 id="risk-h" className="mt-5">
-          So läuft das Erstgespräch
-        </H2>
-        <ol className="mt-10 space-y-6">
-          {STEPS.map((s, i) => (
-            <li key={s} className="flex gap-5">
-              <span className="grid size-9 shrink-0 place-items-center rounded-full bg-muted text-[14px] font-medium">{i + 1}</span>
-              <p className="pt-1 text-[16px]">{s}</p>
+    <>
+      <Section id="ablauf" aria-labelledby="risk-h" className="border-t border-border">
+        <Reveal className="max-w-3xl">
+          <Eyebrow>Ihr erster Schritt</Eyebrow>
+          <H2 id="risk-h" className="mt-5">
+            So läuft das Erstgespräch
+          </H2>
+        </Reveal>
+
+        <ol className="mt-12 grid gap-10 md:mt-16 md:grid-cols-3 md:gap-8">
+          {STEPS.map((t, i) => (
+            <li key={t}>
+              <Reveal delay={i * 100} className="border-t border-foreground pt-6">
+                <p className="text-[14px] tabular-nums text-muted-foreground">0{i + 1}</p>
+                <p className="mt-6 text-[22px] font-medium leading-snug tracking-[-0.02em] md:text-[24px]">{t}</p>
+              </Reveal>
             </li>
           ))}
         </ol>
-        <p className="mt-10 flex items-center gap-3 rounded-lg bg-muted p-4 text-[15px] font-medium">
-          <ShieldCheck className="size-5 shrink-0" aria-hidden />
-          Kein Pitch, keine Folien, keine Verpflichtung.
-        </p>
-      </Reveal>
 
-      <Reveal delay={100}>
-        <H3 className="mb-4 text-[24px]">Häufige Fragen</H3>
-        <Accordion type="single" collapsible defaultValue="faq-0">
-          {FAQ.map((f, i) => (
-            <AccordionItem key={f.q} value={`faq-${i}`}>
-              <AccordionTrigger>{f.q}</AccordionTrigger>
-              <AccordionContent>{f.a}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </Reveal>
-    </Section>
+        <Reveal className="mt-12">
+          <p className="inline-flex items-center gap-3 rounded-full bg-muted px-5 py-3 text-[15px] font-medium">
+            <ShieldCheck className="size-5 shrink-0" aria-hidden />
+            Kein Pitch, keine Folien, keine Verpflichtung.
+          </p>
+        </Reveal>
+      </Section>
+
+      <Section id="faq" aria-labelledby="faq-h" className="bg-section" innerClassName="grid gap-10 md:grid-cols-12 md:gap-16">
+        <Reveal className="md:col-span-4">
+          <H2 id="faq-h">Häufige Fragen</H2>
+        </Reveal>
+        <Reveal delay={100} className="md:col-span-8">
+          <Accordion type="single" collapsible defaultValue="faq-0">
+            {FAQ.map((f, i) => (
+              <AccordionItem key={f.q} value={`faq-${i}`}>
+                <AccordionTrigger>{f.q}</AccordionTrigger>
+                <AccordionContent>{f.a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Reveal>
+      </Section>
+    </>
   );
 }

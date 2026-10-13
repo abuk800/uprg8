@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Sparkle } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Eyebrow, H2, H3 } from "@/components/ui/typography";
 import { Reveal } from "@/components/ui/reveal";
@@ -33,21 +33,28 @@ type Props = {
   columns?: 3 | 4;
   /** Abschnittskopf: zentriert oder linksbündig */
   align?: "center" | "left";
+  /** Karten werden beim Hover schwarz */
+  hoverInvert?: boolean;
   className?: string;
 };
 
-const CardDecorator = ({ children, dark }: { children: React.ReactNode; dark?: boolean }) => (
+const CardDecorator = ({ children, dark, hoverInvert }: { children: React.ReactNode; dark?: boolean; hoverInvert?: boolean }) => (
   <div aria-hidden className="relative mx-auto size-36 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
     <div
       className={cn(
         "absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:24px_24px] opacity-10",
         dark ? "[--border:white]" : "[--border:black]",
+        hoverInvert && !dark && "transition-opacity group-hover:[--border:white]",
       )}
     />
     <div
       className={cn(
         "absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l transition-colors",
-        dark ? "bg-foreground border-white/40 text-white" : "bg-background group-hover:border-foreground",
+        dark
+          ? "bg-foreground border-white/40 text-white"
+          : hoverInvert
+            ? "bg-background group-hover:border-white/40 group-hover:bg-foreground group-hover:text-white"
+            : "bg-background group-hover:border-foreground",
       )}
     >
       {children}
@@ -55,18 +62,41 @@ const CardDecorator = ({ children, dark }: { children: React.ReactNode; dark?: b
   </div>
 );
 
-function FeatureCard({ item }: { item: FeatureItem }) {
+function FeatureCard({ item, hoverInvert }: { item: FeatureItem; hoverInvert?: boolean }) {
   const Icon = item.icon;
   const body = (
-    <Card className={cn("group flex h-full flex-col border-0 shadow-none", item.highlight ? "bg-foreground text-white" : "bg-muted")}>
+    <Card
+      className={cn(
+        "group relative flex h-full flex-col overflow-hidden border-0 shadow-none transition-colors duration-300",
+        item.highlight
+          ? "nenner-glow bg-foreground text-white hover:bg-[#2a2929]"
+          : hoverInvert
+            ? "bg-muted hover:bg-foreground hover:text-white"
+            : "bg-muted",
+      )}
+    >
+      {item.highlight && (
+        <>
+          <Sparkle aria-hidden className="nenner-twinkle absolute right-6 top-6 size-4 fill-accent text-accent [animation-delay:0s]" />
+          <Sparkle aria-hidden className="nenner-twinkle absolute left-7 top-1/2 size-3 fill-white text-white [animation-delay:1.1s]" />
+          <Sparkle aria-hidden className="nenner-twinkle absolute bottom-7 right-9 size-3.5 fill-accent text-accent [animation-delay:2s]" />
+        </>
+      )}
       <CardHeader className="pb-3">
-        <CardDecorator dark={item.highlight}>
+        <CardDecorator dark={item.highlight} hoverInvert={hoverInvert}>
           <Icon className="size-6" aria-hidden strokeWidth={1} />
         </CardDecorator>
         <H3 className="mt-6 text-center">{item.title}</H3>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col text-center">
-        <p className={cn("text-[15px]", item.highlight ? "text-white/80" : "text-muted-foreground")}>{item.text}</p>
+        <p
+          className={cn(
+            "text-[15px] transition-colors duration-300",
+            item.highlight ? "text-white/80" : cn("text-muted-foreground", hoverInvert && "group-hover:text-white/80"),
+          )}
+        >
+          {item.text}
+        </p>
         {item.footer}
         {item.href && (
           <span
@@ -91,7 +121,7 @@ function FeatureCard({ item }: { item: FeatureItem }) {
   return body;
 }
 
-export function FeatureGrid({ eyebrow, title, intro, items, columns = 3, align = "center", className }: Props) {
+export function FeatureGrid({ eyebrow, title, intro, items, columns = 3, align = "center", hoverInvert = false, className }: Props) {
   return (
     <div className={className}>
       {(eyebrow || title || intro) && (
@@ -110,7 +140,7 @@ export function FeatureGrid({ eyebrow, title, intro, items, columns = 3, align =
         >
           {items.map((item, i) => (
             <Reveal key={item.title} delay={i * 80} className="h-full">
-              <FeatureCard item={item} />
+              <FeatureCard item={item} hoverInvert={hoverInvert} />
             </Reveal>
           ))}
         </div>
