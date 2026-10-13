@@ -6,6 +6,7 @@ import { BeforeAfter } from "@/components/sections/before-after";
 import { Proof } from "@/components/sections/proof";
 import { Team } from "@/components/sections/team";
 import { SearchEnd } from "@/components/sections/search-end";
+import { KiFuehrung } from "@/components/sections/ki-fuehrung";
 import { Risk } from "@/components/sections/risk";
 import { Closing } from "@/components/sections/closing";
 import { Footer } from "@/components/sections/footer";
@@ -23,6 +24,7 @@ export default function Home() {
         <Proof />
         <Team />
         <SearchEnd />
+        <KiFuehrung />
         <Risk />
         <Closing />
       </main>
