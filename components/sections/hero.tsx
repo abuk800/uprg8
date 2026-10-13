@@ -65,9 +65,9 @@ export function Hero() {
 
         <div className="mt-16 overflow-hidden rounded-[28px] bg-[#ECEBE9] md:mt-20">
           <Image
-            src={`${IMG}2025/09/Team1.jpeg`}
+            src="/team/team.jpg"
             alt="Die fünf Partner von upgr8: Armin Blassnig, Maximilian Kammerer, David Rohrmann, Daniel Deuring und David Kreiner"
-            width={2400} height={855} priority
+            width={2000} height={712} priority quality={90}
             sizes="(min-width: 1280px) 1200px, 100vw"
             className="aspect-[2.2/1] w-full object-cover object-[50%_20%] md:aspect-[2.8/1]"
           />

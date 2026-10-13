@@ -13,10 +13,12 @@ type Props = {
   /** Button-Stil: auf dunklem Grund weiß statt schwarz */
   onDark?: boolean;
   priority?: boolean;
+  /** Erwartete Darstellungsbreite für next/image, damit die passende Auflösung geladen wird */
+  sizes?: string;
   className?: string;
 };
 
-export function TeamCard({ name, role, color, bw, credential, href = "#kontakt", onDark, className }: Props) {
+export function TeamCard({ name, role, color, bw, credential, href = "#kontakt", onDark, className, sizes = "(min-width: 1024px) 20vw, (min-width: 768px) 33vw, 76vw" }: Props) {
   return (
     <article className={cn("group", className)}>
       <div className="relative aspect-[4/5]">
@@ -26,7 +28,7 @@ export function TeamCard({ name, role, color, bw, credential, href = "#kontakt",
               src={bw}
               alt={`${name}, ${role}, Schwarzweiß-Porträt`}
               fill
-              sizes="(min-width: 1024px) 20vw, (min-width: 768px) 33vw, 76vw"
+              sizes={sizes}
               className="object-cover object-top"
             />
           )}
@@ -34,7 +36,8 @@ export function TeamCard({ name, role, color, bw, credential, href = "#kontakt",
             src={color}
             alt={bw ? `${name}, ${role}, Farbporträt` : `${name}, ${role}`}
             fill
-            sizes="(min-width: 1024px) 20vw, (min-width: 768px) 33vw, 76vw"
+            sizes={sizes}
+            quality={90}
             className={cn("object-cover object-top transition-opacity duration-500", bw && "opacity-0 group-hover:opacity-100 group-focus-within:opacity-100")}
           />
         </div>

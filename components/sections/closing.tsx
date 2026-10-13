@@ -26,7 +26,7 @@ export function Closing() {
         </p>
       </Reveal>
       <Reveal delay={100} className="w-full max-w-[400px] md:justify-self-end">
-        <TeamCard name={armin.name} role={armin.role} color={armin.color} href="tel:+436641441492" onDark />
+        <TeamCard name={armin.name} role={armin.role} color={armin.color} href="tel:+436641441492" onDark sizes="(min-width: 768px) 400px, 90vw" />
       </Reveal>
     </Section>
   );

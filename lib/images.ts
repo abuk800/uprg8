@@ -1,9 +1,9 @@
 const BASE = "https://upgr8.org/wp-content/uploads/";
 
 export const IMG = {
-  team: BASE + "2025/09/Team1.jpeg",
+  team: "/team/team.jpg",
   logo: BASE + "2025/05/Upgr8-Logo_Schwarz_Ohne_Rand.svg",
-  ariane: BASE + "2025/05/Ariane_Pfleger2025_058_c_lupi_spuma.jpg",
+  ariane: "/team/ariane.jpg",
 } as const;
 
 export type Partner = {
