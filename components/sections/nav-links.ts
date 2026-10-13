@@ -4,7 +4,7 @@ export const NAV_LINKS = [
   { href: "#blinder-fleck", label: "Blinder Fleck" },
   { href: "#vorgehen", label: "Vorgehen" },
   { href: "#ergebnisbild", label: "Ergebnisbild" },
-  { href: "#ergebnisse", label: "Ergebnisse" },
+  { href: "#ergebnisse", label: "Referenzen" },
   { href: "#team", label: "Team" },
   { href: "#suche", label: "Klausur" },
   { href: "#ablauf", label: "Ablauf" },
