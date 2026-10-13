@@ -25,7 +25,7 @@ export interface Footer01Props {
   copyright: string;
 }
 
-const linkClass = "text-base font-normal text-muted-foreground transition-colors hover:text-foreground";
+const linkClass = "inline-block py-2 text-base font-normal text-muted-foreground transition-colors hover:text-foreground md:py-0";
 
 /** Footer: Logo und Tagline links, Linkspalten und Kontakt rechts, darunter Trennlinie und Copyright. */
 const Footer = ({ logoSrc, logoAlt, tagline, sections, contactTitle, address, email, phone, linkedin, copyright }: Footer01Props) => {
@@ -43,7 +43,7 @@ const Footer = ({ logoSrc, logoAlt, tagline, sections, contactTitle, address, em
                 <p className="max-w-[300px] text-base font-normal text-muted-foreground">{tagline}</p>
                 {linkedin && (
                   <div className="flex items-center gap-4">
-                    <a href={linkedin} rel="noopener" aria-label="LinkedIn" className="text-muted-foreground transition-colors hover:text-foreground">
+                    <a href={linkedin} rel="noopener" aria-label="LinkedIn" className="-m-3 p-3 text-muted-foreground transition-colors hover:text-foreground">
                       <LinkedinIcon />
                     </a>
                   </div>
@@ -55,9 +55,9 @@ const Footer = ({ logoSrc, logoAlt, tagline, sections, contactTitle, address, em
 
             {sections.map(({ title, links }) => (
               <div key={title} className="col-span-2">
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3 md:gap-4">
                   <p className="text-base font-medium text-foreground">{title}</p>
-                  <ul className="flex flex-col gap-3">
+                  <ul className="flex flex-col gap-1 md:gap-3">
                     {links.map((l) => (
                       <li key={l.title}>
                         <a href={l.href} className={linkClass}>
@@ -73,7 +73,7 @@ const Footer = ({ logoSrc, logoAlt, tagline, sections, contactTitle, address, em
             <div className="col-span-3">
               <div className="flex flex-col gap-4">
                 <p className="text-base font-medium text-foreground">{contactTitle}</p>
-                <address className="flex flex-col gap-3 not-italic">
+                <address className="flex flex-col gap-1 not-italic md:gap-3">
                   <p className="text-base font-normal text-muted-foreground">
                     {address.map((line) => (
                       <span key={line} className="block">

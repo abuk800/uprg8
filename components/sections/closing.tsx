@@ -20,7 +20,7 @@ export function Closing() {
         </CtaButton>
         <p className="text-[14px] text-white/70">
           Lieber per Telefon?{" "}
-          <a href="tel:+436641441492" className="text-white underline underline-offset-4">
+          <a href="tel:+436641441492" className="inline-block py-2 text-white underline underline-offset-4">
             +43 664 144 1492
           </a>
         </p>

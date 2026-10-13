@@ -47,18 +47,18 @@ export function Recognition() {
             <CardCurtainReveal
               tabIndex={0}
               aria-label={`${t.label}: ${t.quote}`}
-              className="h-auto min-h-[340px] rounded-2xl border border-foreground bg-foreground text-white outline-none focus-visible:ring-2 focus-visible:ring-accent md:h-[420px]"
+              className="h-auto rounded-2xl border border-foreground bg-foreground text-white outline-none focus-visible:ring-2 focus-visible:ring-accent md:h-[420px]"
             >
-              <CardCurtainRevealBody className="flex flex-1 flex-col p-7 md:p-8">
+              <CardCurtainRevealBody className="flex flex-1 flex-col p-6 md:p-8">
                 <p className="text-[13px] tabular-nums opacity-60">0{i + 1}</p>
-                <CardCurtainRevealTitle restY={230} className="mt-4 text-[34px] font-medium leading-none tracking-[-0.03em] md:text-[38px]">
+                <CardCurtainRevealTitle restY={230} className="mt-3 text-[30px] font-medium leading-none tracking-[-0.03em] md:mt-4 md:text-[38px]">
                   {t.label}
                 </CardCurtainRevealTitle>
-                <CardCurtainRevealDescription className="mt-6">
-                  <p className="text-[22px] font-medium leading-[1.2] tracking-[-0.02em] md:text-[24px]">{t.quote}</p>
+                <CardCurtainRevealDescription className="mt-5 md:mt-6">
+                  <p className="text-[20px] font-medium leading-[1.2] tracking-[-0.02em] md:text-[24px]">{t.quote}</p>
                 </CardCurtainRevealDescription>
               </CardCurtainRevealBody>
-              <CardCurtainRevealFooter className="mt-auto px-7 pb-7 md:px-8 md:pb-8">
+              <CardCurtainRevealFooter className="mt-auto px-6 pb-6 md:px-8 md:pb-8">
                 <p className="border-t border-white/25 pt-4 text-[15px] opacity-70">{t.line}</p>
               </CardCurtainRevealFooter>
               <CardCurtain className="bg-white" />
@@ -91,7 +91,7 @@ export function Recognition() {
           <p className="mt-4 text-[15px] text-muted-foreground">in dem Ihre Strategie wartet, entscheidet der Wettbewerb für Sie.</p>
         </Reveal>
       </div>
-      <p className="mt-8 text-[12px] text-muted-foreground">Dr. Wieselhuber &amp; Partner, Studie mit 116 Familienunternehmen (2026)</p>
+      <p className="mt-8 text-[13px] text-muted-foreground">Dr. Wieselhuber &amp; Partner, Studie mit 116 Familienunternehmen (2026)</p>
     </Section>
   );
 }

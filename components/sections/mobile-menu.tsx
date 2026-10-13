@@ -8,7 +8,7 @@ import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "@/com
 export function MobileMenu() {
   return (
     <Sheet>
-      <SheetTrigger className="lg:hidden" aria-label="Menü öffnen">
+      <SheetTrigger className="-mr-2.5 grid size-11 place-items-center lg:hidden" aria-label="Menü öffnen">
         <Menu className="size-6" />
       </SheetTrigger>
       <SheetContent className="text-foreground">

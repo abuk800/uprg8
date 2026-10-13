@@ -39,17 +39,17 @@ type Props = {
 };
 
 const CardDecorator = ({ children, dark, hoverInvert }: { children: React.ReactNode; dark?: boolean; hoverInvert?: boolean }) => (
-  <div aria-hidden className="relative mx-auto size-36 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+  <div aria-hidden className="relative size-16 shrink-0 max-md:row-span-2 md:mx-auto md:size-36 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
     <div
       className={cn(
-        "absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:24px_24px] opacity-10",
+        "absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:12px_12px] opacity-10 md:bg-[size:24px_24px]",
         dark ? "[--border:white]" : "[--border:black]",
         hoverInvert && !dark && "transition-opacity group-hover:[--border:white]",
       )}
     />
     <div
       className={cn(
-        "absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l transition-colors",
+        "absolute inset-0 m-auto flex size-9 items-center justify-center border-t border-l transition-colors md:size-12",
         dark
           ? "bg-foreground border-white/40 text-white"
           : hoverInvert
@@ -67,7 +67,7 @@ function FeatureCard({ item, hoverInvert }: { item: FeatureItem; hoverInvert?: b
   const body = (
     <Card
       className={cn(
-        "group relative flex h-full flex-col overflow-hidden border-0 shadow-none transition-colors duration-300",
+        "group relative flex h-full flex-col overflow-hidden border-0 shadow-none transition-colors duration-300 max-md:grid max-md:grid-cols-[4rem_1fr] max-md:items-start max-md:gap-x-4 max-md:gap-y-1 max-md:p-5",
         item.highlight
           ? "nenner-glow bg-foreground text-white hover:bg-[#2a2929]"
           : hoverInvert
@@ -78,20 +78,20 @@ function FeatureCard({ item, hoverInvert }: { item: FeatureItem; hoverInvert?: b
       {item.highlight && (
         <>
           <Sparkle aria-hidden className="nenner-twinkle absolute right-6 top-6 size-4 fill-accent text-accent [animation-delay:0s]" />
-          <Sparkle aria-hidden className="nenner-twinkle absolute left-7 top-1/2 size-3 fill-white text-white [animation-delay:1.1s]" />
+          <Sparkle aria-hidden className="nenner-twinkle absolute left-7 top-1/2 size-3 max-md:hidden fill-white text-white [animation-delay:1.1s]" />
           <Sparkle aria-hidden className="nenner-twinkle absolute bottom-7 right-9 size-3.5 fill-accent text-accent [animation-delay:2s]" />
         </>
       )}
-      <CardHeader className="pb-3">
+      <CardHeader className="pb-3 max-md:contents">
         <CardDecorator dark={item.highlight} hoverInvert={hoverInvert}>
-          <Icon className="size-6" aria-hidden strokeWidth={1} />
+          <Icon className="size-5 md:size-6" aria-hidden strokeWidth={1} />
         </CardDecorator>
-        <H3 className="mt-6 text-center">{item.title}</H3>
+        <H3 className="mt-6 text-center max-md:col-start-2 max-md:mt-0 max-md:text-left">{item.title}</H3>
       </CardHeader>
-      <CardContent className="flex flex-1 flex-col text-center">
+      <CardContent className="flex flex-1 flex-col text-center max-md:contents">
         <p
           className={cn(
-            "text-[15px] transition-colors duration-300",
+            "text-[15px] transition-colors duration-300 max-md:col-start-2 max-md:text-left",
             item.highlight ? "text-white/80" : cn("text-muted-foreground", hoverInvert && "group-hover:text-white/80"),
           )}
         >
@@ -101,7 +101,7 @@ function FeatureCard({ item, hoverInvert }: { item: FeatureItem; hoverInvert?: b
         {item.href && (
           <span
             className={cn(
-              "mt-auto inline-flex items-center gap-1 self-center pt-4 text-[14px] font-medium transition-opacity",
+              "mt-auto inline-flex items-center gap-1 self-center pt-4 max-md:col-start-2 max-md:self-start text-[14px] font-medium transition-opacity",
               item.ctaVisible ? "underline underline-offset-4" : "opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100",
             )}
           >

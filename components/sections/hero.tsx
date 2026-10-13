@@ -23,7 +23,7 @@ export function Hero() {
     <>
       <header className="sticky top-0 z-50 border-b border-[#E7E7EA] bg-[#FBFAF9]/90 backdrop-blur">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 md:px-10">
-          <a href="/" aria-label="upgr8 Startseite">
+          <a href="/" aria-label="upgr8 Startseite" className="-my-2 inline-flex items-center py-2">
             <img src={`${IMG}2025/05/Upgr8-Logo_Schwarz_Ohne_Rand.svg`} alt="upgr8" className="h-7 w-auto" />
           </a>
           <nav aria-label="Seitenabschnitte" className="hidden gap-9 text-[15px] text-[#191818]/80 lg:flex">

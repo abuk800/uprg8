@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 
@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   title: "upgr8 – Strategie, die nicht in der Schublade landet",
   description:
     "upgr8 ist die Strategieberatung für den Mittelstand. Strategie gemeinsam mit den Menschen entwickeln, die sie umsetzen. Buchen Sie ein Erstgespräch mit Armin Blassnig.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#FBFAF9",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

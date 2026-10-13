@@ -20,12 +20,12 @@ export type AccordionItem = {
  */
 function TailwindImageAccordion({ items, className }: { items: AccordionItem[]; className?: string }) {
   return (
-    <div className={cn("group flex max-md:flex-col justify-center gap-2 w-full mx-auto", className)}>
+    <div className={cn("group flex justify-center gap-2 w-full mx-auto max-md:-mx-6 max-md:w-[calc(100%+3rem)] max-md:snap-x max-md:snap-mandatory max-md:justify-start max-md:overflow-x-auto max-md:scroll-pl-6 max-md:px-6 max-md:pb-2 max-md:[scrollbar-width:none] max-md:[&::-webkit-scrollbar]:hidden", className)}>
       {items.map((item) => {
         return (
           <article
             key={item.id}
-            className="group/article relative w-full rounded-xl overflow-hidden md:not-[&:hover]:group-hover:w-[20%] md:[&:not(:focus-within):not(:hover)]:group-focus-within:w-[20%] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.15)] before:absolute before:inset-x-0 before:bottom-0 before:h-1/2 before:z-[1] before:bg-linear-to-t before:from-black/60 before:transition-opacity md:before:opacity-0 md:hover:before:opacity-100 focus-within:before:opacity-100 after:opacity-0 md:not-[&:hover]:group-hover:after:opacity-100 md:[&:not(:focus-within):not(:hover)]:group-focus-within:after:opacity-100 after:absolute after:inset-0 after:bg-white/30 after:backdrop-blur-sm after:rounded-lg after:transition-all focus-within:ring-3 focus-within:ring-accent"
+            className="group/article relative w-full rounded-xl overflow-hidden max-md:w-[78%] max-md:shrink-0 max-md:snap-start md:not-[&:hover]:group-hover:w-[20%] md:[&:not(:focus-within):not(:hover)]:group-focus-within:w-[20%] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.15)] before:absolute before:inset-x-0 before:bottom-0 before:h-1/2 before:z-[1] before:bg-linear-to-t before:from-black/60 before:transition-opacity md:before:opacity-0 md:hover:before:opacity-100 focus-within:before:opacity-100 after:opacity-0 md:not-[&:hover]:group-hover:after:opacity-100 md:[&:not(:focus-within):not(:hover)]:group-focus-within:after:opacity-100 after:absolute after:inset-0 after:bg-white/30 after:backdrop-blur-sm after:rounded-lg after:transition-all focus-within:ring-3 focus-within:ring-accent"
           >
             <a
               className="absolute inset-0 text-white z-10 p-4 flex flex-col justify-end"
@@ -33,7 +33,7 @@ function TailwindImageAccordion({ items, className }: { items: AccordionItem[]; 
               aria-label={`${item.title}, ${item.description}`}
             >
               {item.badge && (
-                <span className="mb-3 w-fit rounded-full bg-accent px-3 py-1 text-[12px] font-medium text-foreground md:whitespace-nowrap">
+                <span className="mb-3 w-fit rounded-full bg-accent px-3 py-1 text-[13px] font-medium text-foreground md:whitespace-nowrap">
                   {item.badge}
                 </span>
               )}

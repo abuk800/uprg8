@@ -12,7 +12,7 @@ export function Section({
   ...props
 }: React.ComponentProps<"section"> & { innerClassName?: string }) {
   return (
-    <section className={cn("py-20 md:py-32", className)} {...props}>
+    <section className={cn("py-16 md:py-32", className)} {...props}>
       <Container className={innerClassName}>{children}</Container>
     </section>
   );
