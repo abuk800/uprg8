@@ -37,7 +37,7 @@ export function Proof() {
 
       <Reveal className="mt-12 grid items-center gap-8 md:mt-16 md:grid-cols-2 md:gap-14">
         <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-portrait">
-          <Image src={IMG.ariane} alt="Dr. Ariane Pfleger, Executive Director der Raiffeisen Landesbank Steiermark" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <Image src={IMG.ariane} alt="Dr. Ariane Pfleger, Executive Director der Raiffeisen Landesbank Steiermark" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover object-[75%_30%]" />
         </div>
         <figure>
           <blockquote className="text-[28px] font-normal leading-snug tracking-[-0.02em]">
