@@ -7,6 +7,7 @@ import { Proof } from "@/components/sections/proof";
 import { Team } from "@/components/sections/team";
 import { SearchEnd } from "@/components/sections/search-end";
 import { KiFuehrung } from "@/components/sections/ki-fuehrung";
+import { Checkup } from "@/components/sections/checkup";
 import { Risk } from "@/components/sections/risk";
 import { Closing } from "@/components/sections/closing";
 import { Footer } from "@/components/sections/footer";
@@ -25,6 +26,7 @@ export default function Home() {
         <Team />
         <SearchEnd />
         <KiFuehrung />
+        <Checkup />
         <Risk />
         <Closing />
       </main>
