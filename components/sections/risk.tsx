@@ -1,6 +1,6 @@
 import { ShieldCheck } from "lucide-react";
 import { Section } from "@/components/ui/section";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { UniqueAccordion } from "@/components/ui/interactive-accordion";
 import { Eyebrow, H2 } from "@/components/ui/typography";
 import { Reveal } from "@/components/ui/reveal";
 import ScrollTimeline from "@/components/ui/scroll-timeline";
@@ -50,14 +50,10 @@ export function Risk() {
           <H2 id="faq-h">Häufige Fragen</H2>
         </Reveal>
         <Reveal delay={100} className="md:col-span-8">
-          <Accordion type="single" collapsible defaultValue="faq-0">
-            {FAQ.map((f, i) => (
-              <AccordionItem key={f.q} value={`faq-${i}`}>
-                <AccordionTrigger>{f.q}</AccordionTrigger>
-                <AccordionContent>{f.a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <UniqueAccordion
+            defaultOpenId="faq-0"
+            items={FAQ.map((f, i) => ({ id: `faq-${i}`, title: f.q, content: f.a }))}
+          />
         </Reveal>
       </Section>
     </>
