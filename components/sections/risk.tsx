@@ -1,4 +1,3 @@
-import { ShieldCheck } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import { UniqueAccordion } from "@/components/ui/interactive-accordion";
 import { Eyebrow, H2 } from "@/components/ui/typography";
@@ -36,13 +35,6 @@ export function Risk() {
           className="mt-12 md:mt-16"
           steps={STEPS.map((text, i) => ({ id: `step-${i}`, label: `0${i + 1}`, text }))}
         />
-
-        <Reveal className="mt-12">
-          <p className="inline-flex items-center gap-3 rounded-full bg-muted px-5 py-3 text-[15px] font-medium">
-            <ShieldCheck className="size-5 shrink-0" aria-hidden />
-            Kein Pitch, keine Folien, keine Verpflichtung.
-          </p>
-        </Reveal>
       </Section>
 
       <Section id="faq" aria-labelledby="faq-h" className="bg-section" innerClassName="grid gap-10 md:grid-cols-12 md:gap-16">
