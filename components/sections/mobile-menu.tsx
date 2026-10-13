@@ -4,11 +4,11 @@ import { ArrowUpRight, Menu } from "lucide-react";
 import { NAV_LINKS } from "@/components/sections/nav-links";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
-/** Unterhalb von xl: shadcn Sheet mit allen Sektions-Ankern und dem Erstgespräch-Button. */
+/** Unterhalb von lg: shadcn Sheet mit allen Sektions-Ankern und dem Erstgespräch-Button. */
 export function MobileMenu() {
   return (
     <Sheet>
-      <SheetTrigger className="xl:hidden" aria-label="Menü öffnen">
+      <SheetTrigger className="lg:hidden" aria-label="Menü öffnen">
         <Menu className="size-6" />
       </SheetTrigger>
       <SheetContent className="text-foreground">

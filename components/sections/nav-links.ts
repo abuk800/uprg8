@@ -1,12 +1,11 @@
-/** Ein Anker pro Sektion, in der Reihenfolge der Seite. */
+/**
+ * Header-Anker: nur Sektionen mit Handlungsaufforderung (Blinder Fleck, Ergebnisbild)
+ * oder Informationsgehalt (Referenzen, Team, FAQ), in der Reihenfolge der Seite.
+ */
 export const NAV_LINKS = [
-  { href: "#situation", label: "Situation" },
   { href: "#blinder-fleck", label: "Blinder Fleck" },
-  { href: "#vorgehen", label: "Vorgehen" },
   { href: "#ergebnisbild", label: "Ergebnisbild" },
   { href: "#ergebnisse", label: "Referenzen" },
   { href: "#team", label: "Team" },
-  { href: "#suche", label: "Klausur" },
-  { href: "#ablauf", label: "Ablauf" },
   { href: "#faq", label: "FAQ" },
 ];
