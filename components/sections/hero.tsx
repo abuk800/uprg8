@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { ArrowUpRight, Sparkle } from "lucide-react"
 import { MobileMenu } from "@/components/sections/mobile-menu"
+import { NAV_LINKS } from "@/components/sections/nav-links"
 
 /*
  * Headline-Varianten für einen späteren Test:
@@ -25,15 +26,17 @@ export function Hero() {
           <a href="/" aria-label="upgr8 Startseite">
             <img src={`${IMG}2025/05/Upgr8-Logo_Schwarz_Ohne_Rand.svg`} alt="upgr8" className="h-7 w-auto" />
           </a>
-          <nav className="hidden gap-9 text-[15px] text-[#191818]/80 md:flex">
-            <a href="#situation" className="hover:text-[#191818]">Ihre Situation</a>
-            <a href="#vorgehen" className="hover:text-[#191818]">Vorgehen</a>
-            <a href="#team" className="hover:text-[#191818]">Team</a>
-            <a href="#faq" className="hover:text-[#191818]">FAQ</a>
+          <nav aria-label="Seitenabschnitte" className="hidden gap-6 text-[14px] text-[#191818]/80 xl:flex">
+            {NAV_LINKS.map((l) => (
+              <a key={l.href} href={l.href} className="whitespace-nowrap hover:text-[#191818]">{l.label}</a>
+            ))}
           </nav>
           <a href="#kontakt" data-cta="nav"
-            className="hidden rounded-full border border-[#191818]/20 px-5 py-2.5 text-[14px] font-medium transition-colors hover:border-[#191818] md:inline-flex">
-            Kontakt
+            className="group ml-auto mr-5 hidden items-center gap-3 rounded-full bg-[#191818] py-1.5 pl-6 pr-1.5 text-[15px] font-medium text-white md:inline-flex xl:ml-0 xl:mr-0">
+            Erstgespräch buchen
+            <span className="grid size-9 place-items-center rounded-full bg-[#FF6978] text-black transition-transform duration-300 group-hover:rotate-45">
+              <ArrowUpRight className="size-4" aria-hidden />
+            </span>
           </a>
           <MobileMenu />
         </div>
