@@ -2,15 +2,6 @@ import { Section } from "@/components/ui/section";
 import { Eyebrow, H2 } from "@/components/ui/typography";
 import { CountUp } from "@/components/ui/count-up";
 import { Reveal } from "@/components/ui/reveal";
-import {
-  CardCurtain,
-  CardCurtainReveal,
-  CardCurtainRevealBody,
-  CardCurtainRevealDescription,
-  CardCurtainRevealFooter,
-  CardCurtainRevealTitle,
-} from "@/components/ui/card-curtain-reveal";
-import { Plus } from "lucide-react";
 
 const THOUGHTS = [
   {
@@ -30,7 +21,7 @@ const THOUGHTS = [
   },
 ];
 
-/** Der Spiegel: drei Karten, Hover (oder Fokus) öffnet den Vorhang und zeigt den Gedanken. Touch: immer offen. */
+/** Der Spiegel: rein typografisch, keine Karten. Alles direkt sichtbar. */
 export function Recognition() {
   return (
     <Section id="situation" aria-labelledby="spiegel-h">
@@ -41,34 +32,14 @@ export function Recognition() {
         </H2>
       </Reveal>
 
-      <div className="mt-12 grid gap-4 md:mt-16 md:grid-cols-3 md:gap-5">
+      <div className="mt-12 md:mt-16">
         {THOUGHTS.map((t, i) => (
-          <Reveal key={t.label} delay={i * 80}>
-            <CardCurtainReveal
-              tabIndex={0}
-              aria-label={`${t.label}: ${t.quote}`}
-              className="h-auto rounded-2xl border border-foreground bg-foreground text-white outline-none focus-visible:ring-2 focus-visible:ring-accent md:h-[420px]"
-            >
-              <CardCurtainRevealBody className="flex flex-1 flex-col p-6 md:p-8">
-                <p className="text-[13px] tabular-nums opacity-60">0{i + 1}</p>
-                <CardCurtainRevealTitle restY={230} className="mt-3 text-[30px] font-medium leading-none tracking-[-0.03em] md:mt-4 md:text-[38px]">
-                  {t.label}
-                </CardCurtainRevealTitle>
-                <CardCurtainRevealDescription className="mt-5 md:mt-6">
-                  <p className="text-[20px] font-medium leading-[1.2] tracking-[-0.02em] md:text-[24px]">{t.quote}</p>
-                </CardCurtainRevealDescription>
-              </CardCurtainRevealBody>
-              <CardCurtainRevealFooter className="mt-auto px-6 pb-6 md:px-8 md:pb-8">
-                <p className="border-t border-white/25 pt-4 text-[15px] opacity-70">{t.line}</p>
-              </CardCurtainRevealFooter>
-              <CardCurtain className="bg-white" />
-              <span
-                aria-hidden
-                className="pointer-events-none absolute right-6 top-6 grid size-8 place-items-center rounded-full bg-accent text-foreground [@media(hover:none)]:hidden"
-              >
-                <Plus className="size-4" strokeWidth={2.25} />
-              </span>
-            </CardCurtainReveal>
+          <Reveal key={t.label} delay={i * 80} className="grid gap-4 border-t border-foreground py-8 md:grid-cols-12 md:gap-8 md:py-12">
+            <p className="text-[14px] text-muted-foreground md:col-span-3">{t.label}</p>
+            <div className="md:col-span-9">
+              <p className="text-[26px] font-medium leading-[1.15] tracking-[-0.03em] md:text-[36px]">{t.quote}</p>
+              <p className="mt-4 text-[16px] text-muted-foreground">{t.line}</p>
+            </div>
           </Reveal>
         ))}
       </div>
